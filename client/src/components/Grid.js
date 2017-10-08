@@ -10,6 +10,9 @@ export default class Grid extends React.Component {
           <h1>Projects</h1>
         </Row>
         <Projects />
+        <Row>
+          <iframe src="http://localhost:4000/graphiql" title="GraphQL" className="clientGraphiql"></iframe>
+        </Row>
       </Container>
     );
   }
