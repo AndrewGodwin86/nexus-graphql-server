@@ -1,10 +1,5 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  text-align: left;
 }
 
 .App-header {
@@ -31,4 +26,17 @@
   height:600px;
   border:0;
   margin: 30px 0;
+}
+
+.page-header {
+  margin-bottom: 20px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+}
+.navbar {
+  margin-bottom:30px;
+}
+.loading {
+  margin:0 auto;
 }

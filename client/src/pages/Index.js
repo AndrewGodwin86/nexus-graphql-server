@@ -6,7 +6,7 @@ export default class Index extends React.Component {
     return (
       <Container>
         <Row>
-          <h1>Nexus GraphQL</h1>
+          <h1 className="page-header">Nexus GraphQL</h1>
         </Row>
         
         <Row>
