@@ -8,6 +8,7 @@ import {
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Index from './pages/Index';
+import Projects from './pages/Projects';
 
 
 const networkInterface = createNetworkInterface({ uri: 'http://localhost:4000/graphql'});
@@ -26,6 +27,7 @@ class App extends Component {
             <Navigation />
             <Switch>
               <Route exact name="index" path="/" component={Index} />
+              <Route exact name="projects" path="/projects" component={Projects} />
             </Switch>
           </div>
         </ApolloProvider>
