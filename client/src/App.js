@@ -5,6 +5,7 @@ import {
   ApolloProvider,
   createNetworkInterface
 } from 'react-apollo';
+import Navigation from './components/Navigation';
 
 const networkInterface = createNetworkInterface({ uri: 'http://localhost:4000/graphql'});
 
@@ -18,9 +19,7 @@ class App extends Component {
     return (
       <ApolloProvider client={client}>
         <div className="App">
-          <nav className="navbar navbar-dark bg-dark">
-            Nexus GraphQL Demo
-          </nav>
+          <Navigation />
         </div>
       </ApolloProvider>
     );
