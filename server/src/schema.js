@@ -731,6 +731,7 @@ const typeDefs = `
 	    subItemDateStamp: String
 		mentionsList: [Mention]
     	hashtagsList: [Hashtag]
+    	likesList: [Like]
 		mediaList: [MediaDetails]
 	    displayEntityType: String
 	    displayEntityID: String
@@ -762,7 +763,14 @@ const typeDefs = `
 	    hashtagAuthor: String
 	    dateStamp: String
 	}
-
+	type Like {
+		likeID: Int,
+		itemID: Int,
+		authorID: String
+		authorName: String
+		authorImageID: String
+		dateStamp: String
+	}
 	type Media {
 		entityID: ID
 		entityName: String

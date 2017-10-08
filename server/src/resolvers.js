@@ -178,7 +178,10 @@ export const resolvers = {
   	},
   	displayEntityImagePublicURL: (streamItem, args, context) => {
   		return getPublicMediaURL(streamItem.displayEntityImageID, "50w50h_fxd", context);
-  	}
+  	},
+    likesList: (streamItem, args, context) => {
+      return getRelatedEntityByType("streamItems", streamItem.itemID, "likes", context);
+    }
   },
   Media: {
     mediaDetails: (media, args, context) => {
