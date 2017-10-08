@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import ProjectCard from './ProjectCard';
+import Projects from './Projects';
 
 export default class Grid extends React.Component {
   render() {
@@ -9,12 +9,7 @@ export default class Grid extends React.Component {
         <Row>
           <h1>Projects</h1>
         </Row>
-        <Row>
-          <Col><ProjectCard /></Col>
-          <Col><ProjectCard /></Col>
-          <Col><ProjectCard /></Col>
-          <Col><ProjectCard /></Col>
-        </Row>
+        <Projects />
       </Container>
     );
   }
