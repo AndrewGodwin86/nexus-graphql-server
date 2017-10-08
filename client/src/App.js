@@ -18,7 +18,7 @@ class App extends Component {
     return (
       <ApolloProvider client={client}>
         <div className="App">
-          <nav className="navbar">
+          <nav className="navbar navbar-dark bg-dark">
             Nexus GraphQL Demo
           </nav>
         </div>
