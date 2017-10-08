@@ -7,6 +7,9 @@ export default class Grid extends React.Component {
     return (
       <Container>
         <Row>
+          <h1>Projects</h1>
+        </Row>
+        <Row>
           <Col><ProjectCard /></Col>
           <Col><ProjectCard /></Col>
           <Col><ProjectCard /></Col>
