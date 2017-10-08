@@ -19,7 +19,7 @@ const StreamItems = ({ data: {loading, error, streamItemList }}) => {
   }
 
   return (
-    <Container>
+    <Container className="stream">
       <Row>
         <h1 className="page-header">StreamItems</h1>
       </Row>
@@ -49,6 +49,11 @@ export const streamItemsListQuery = gql`
         displayEntityID
         displayEntityImageID
         displayEntityImagePublicURL
+        subItemListName
+        subItemTitle
+        subItemSubtitle
+        subItemListURL
+        subItemProfileURL
       }
     }
   }

@@ -41,17 +41,27 @@
   text-align: center;
   margin:0 auto;
 }
+.stream a, .stream a:link {
+  text-decoration: none;
+  color: #232323;
+}
 .stream-item-container {
   position: relative;
   width:600px;
   padding: 14px 0 14px 77px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
 }
+.author-name {
+  font-size: 14px;
+}
 
 .author-img-container {
     position: absolute;
     float: left;
     left: 14px;
+}
+.author-img-emp {
+  border-radius: 50%;
 }
 .streamitem-date {
   float:right;
@@ -70,4 +80,35 @@
     display: inline-block;
     margin: 7px 15px 7px 0;
     cursor: pointer;
+}
+.subitem {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  line-height: normal;
+}
+.subitem-title {
+  font-size: 12px;
+  font-weight:500;
+}
+.calendar-box {
+  display: flex;
+}
+.cal-icon {
+  width: 148px;
+  height: 78px;
+  border: 1px solid #d6d6d6;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: 500;
+  float: left;
+  margin-right: 10px;
+}
+.cal-month {
+  font-size: 18px;
+  margin-top: 8px;
+  margin-bottom: -5px;
+}
+.cal-day {
+  font-size: 36px;
 }
