@@ -27,6 +27,9 @@ export default class Navigation extends React.Component {
                 <NavLink href="/components/">Entities</NavLink>
               </NavItem>
               <NavItem>
+                <NavLink href="http://localhost:4000/graphiql">GraphiQL</NavLink>
+              </NavItem>
+              <NavItem>
                 <NavLink href="http://developer.knowledge-architecture.com">Nexus REST API</NavLink>
               </NavItem>
             </Nav>

@@ -22,9 +22,6 @@ class App extends Component {
         <div className="App">
           <Navigation />
           <Grid />
-          <p>Access GraphiQL from&nbsp; 
-            <a href="http://localhost:4000/graphiql" target="_blank" rel="noopener noreferrer">http://localhost:4000/graphiql</a>
-          </p>
         </div>
       </ApolloProvider>
     );
