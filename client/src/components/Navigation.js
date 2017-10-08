@@ -29,6 +29,9 @@ export default class Navigation extends React.Component {
                 <NavLink href="/projects/">Projects</NavLink>
               </NavItem>
               <NavItem>
+                <NavLink href="/streamitems/">Stream Items</NavLink>
+              </NavItem>
+              <NavItem>
                 <NavLink href="http://localhost:4000/graphiql">GraphiQL</NavLink>
               </NavItem>
               <NavItem>
