@@ -83,6 +83,9 @@ export const resolvers = {
     streamItemList: (root, args, context) => {
       return getEntityList("streamItems", context, args.perPage);
     },
+    getStreamItem: (root, args, context) => {
+      return getEntityByID("streamitems", args.itemID, context);
+    },
     mediaList: (root, args, context) => {
     	return getEntityList("media", context, args.perPage);
   	},
