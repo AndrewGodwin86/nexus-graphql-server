@@ -41,3 +41,33 @@
   text-align: center;
   margin:0 auto;
 }
+.stream-item-container {
+  position: relative;
+  width:600px;
+  padding: 14px 0 14px 77px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+}
+
+.author-img-container {
+    position: absolute;
+    float: left;
+    left: 14px;
+}
+.streamitem-date {
+  float:right;
+}
+
+.streamitem-body {
+  word-wrap: break-word;
+  padding-right: 14px;
+  margin-bottom: 0;
+}
+
+.streamitem-title {
+    font-size: 20px;
+    font-weight: 500;
+    /*color: #fff;*/
+    display: inline-block;
+    margin: 7px 15px 7px 0;
+    cursor: pointer;
+}

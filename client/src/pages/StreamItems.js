@@ -24,7 +24,7 @@ const StreamItems = ({ data: {loading, error, streamItemList }}) => {
         <h1 className="page-header">StreamItems</h1>
       </Row>
       { streamItemList.map( strItem => 
-        (<Row>
+        (<Row key={strItem.entityID}>
           <StreamItem key={strItem.entityID} 
           item={strItem.streamItemDetails} />
         </Row>)
@@ -36,9 +36,10 @@ const StreamItems = ({ data: {loading, error, streamItemList }}) => {
 
 export const streamItemsListQuery = gql`
 {
-    streamItemList(perPage:15) {
+    streamItemList(perPage:10) {
       entityID
       streamItemDetails {
+        itemType
         titleWithEntityNames
         authorName
         likeCount
