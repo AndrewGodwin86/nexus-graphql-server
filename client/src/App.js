@@ -5,8 +5,10 @@ import {
   ApolloProvider,
   createNetworkInterface
 } from 'react-apollo';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
-import Grid from './components/Grid';
+import Index from './pages/Index';
+
 
 const networkInterface = createNetworkInterface({ uri: 'http://localhost:4000/graphql'});
 
@@ -18,12 +20,16 @@ const client = new ApolloClient({
 class App extends Component {
   render() {
     return (
-      <ApolloProvider client={client}>
-        <div className="App">
-          <Navigation />
-          <Grid />
-        </div>
-      </ApolloProvider>
+      <Router>
+        <ApolloProvider client={client}>
+          <div className="App">
+            <Navigation />
+            <Switch>
+              <Route exact name="index" path="/" component={Index} />
+            </Switch>
+          </div>
+        </ApolloProvider>
+      </Router>
     );
   }
 }

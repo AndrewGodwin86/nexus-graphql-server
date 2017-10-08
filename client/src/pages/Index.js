@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Row } from 'reactstrap';
-import Projects from './Projects';
+import Projects from '../components/Projects';
 
-export default class Grid extends React.Component {
+export default class Index extends React.Component {
   render() {
     return (
       <Container>
