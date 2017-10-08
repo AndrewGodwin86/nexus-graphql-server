@@ -19,7 +19,9 @@ export default class Navigation extends React.Component {
     return (
       <div>
         <Navbar color="dark" dark expand="md">
-          <NavbarBrand href="/">Nexus Graphql</NavbarBrand>
+          <NavbarBrand href="/">
+            <img src="./GraphQL_Logo.png" width="30" height="30" className="d-inline-block align-top" alt="GraphQL" />
+            &nbsp;&nbsp;Nexus Graphql</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="mr-auto" navbar>
