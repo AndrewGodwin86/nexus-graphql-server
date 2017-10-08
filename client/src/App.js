@@ -6,6 +6,7 @@ import {
   createNetworkInterface
 } from 'react-apollo';
 import Navigation from './components/Navigation';
+import Grid from './components/Grid';
 
 const networkInterface = createNetworkInterface({ uri: 'http://localhost:4000/graphql'});
 
@@ -20,6 +21,7 @@ class App extends Component {
       <ApolloProvider client={client}>
         <div className="App">
           <Navigation />
+          <Grid />
           <p>Access GraphiQL from&nbsp; 
             <a href="http://localhost:4000/graphiql" target="_blank">http://localhost:4000/graphiql</a>
           </p>
