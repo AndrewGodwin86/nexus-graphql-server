@@ -848,6 +848,7 @@ type Query {
 	relationshipList: [Relationship]
 	getProject(projectID: String): ProjectDetails
 	getEmployee(employeeID: String): EmployeeDetails
+	getStreamItem(itemID: Int!): StreamItemDetails 
 }
 `;
 
