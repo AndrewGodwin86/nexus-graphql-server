@@ -3,8 +3,6 @@ import { gql, graphql } from 'react-apollo';
 import Loading from './Loading';
 import ProjectCard from './ProjectCard';
 import { Row, Col } from 'reactstrap';
-import { Card, CardImg, CardText, CardBody, CardLink,
-  CardTitle, CardSubtitle } from 'reactstrap';
 
 
 const Projects = ({ data: {loading, error, projectList }}) => {
