@@ -20,13 +20,13 @@ export default class Navigation extends React.Component {
       <div>
         <Navbar color="dark" dark expand="md">
           <NavbarBrand href="/">
-            <img src="./GraphQL_Logo.png" width="30" height="30" className="d-inline-block align-top" alt="GraphQL" />
+            <img src={process.env.PUBLIC_URL+'/GraphQL_Logo.png'} width="30" height="30" className="d-inline-block align-top" alt="GraphQL" />
             &nbsp;&nbsp;Nexus Graphql</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="mr-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Entities</NavLink>
+                <NavLink href="/projects/">Projects</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="http://localhost:4000/graphiql">GraphiQL</NavLink>
