@@ -7,7 +7,12 @@ import { Container, Row, Col } from 'reactstrap';
 
 const Projects = ({ data: {loading, error, projectList }}) => {
   if (loading) {
-    return <Loading />;
+    return (
+      <Container>
+        <Row>
+          <Loading />
+        </Row>
+      </Container>);
   }
   if (error) {
     return <p>{error.message}</p>;
@@ -16,6 +21,7 @@ const Projects = ({ data: {loading, error, projectList }}) => {
   return (
     <Container>
       <Row>
+        <h1 className="page-header">Projects</h1>
           { projectList.map( proj => 
             (
               <Col key={proj.projectDetails.projectID} md="4">
