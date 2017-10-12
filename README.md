@@ -1,34 +1,80 @@
-#Nexus Graphql
+# Nexus Graphql
 
-A GraphQL wrapper around the Knowledge Architecture Nexus API.
+A GraphQL wrapper around the Nexus REST API from Knowledge Architecture.
 
 ## Table of Contents
 
 - Overview
+  - Use cases
 - Nexus API
-- Getting Started
 - Server
-- Client
+- Getting Started
+- GraphiQL
+- Example Queries
+
 
 ## Overview
+This project wraps the Nexus REST API in a GraphQL endpoint.
 
-## Nexus API
+The number of round trips to the Nexus server I would have to make to get project or employee data always used to irk me. There must be another way I thought?
+
+Fast forward a couple of years and GraphQL is really start to get traction. Github recently published their GraphQL endpoint.
+
+This started off in Apollo Launchpad which is great little tool to get started. The Apollo project
+
+### Why GraphQL?
+
+### Use cases
+For KA clients who want to make use of the API but who are a large geographical distance could potential reduce response times by deploying a GraphQL server in the US-West region. In this scenario, the client makes one roundtrip from the far away place to the GraphQL server and receives one response.
+
+
+
+## Nexus REST API
+The standard documentation of the Nexus API is available here:
 https://developer.knowledge-architecture.com
 
+Any questions related to the functionality of the Nexus REST API should be directed to [support@knowledge-architecture.com](mailto:support@knowledge-architecture.com)
+
 ## Getting Started
+First clone this repo and run npm install
 
-### App secrets
-
-The Nexus API uses Basic Authentication for each request to a REST endpoint. This a a base64 encoded string of your Nexus clientID and your client secret that is passed as an Authorization header. See more info here
-
-To run this app locally, you will need to provide your header (AuthHeader) as an environment variable.
-
-You can set them by exporting them as environment variables in your shell: 
-
-```sh
-export AuthHeader="<your value here>"
+```bash
+git clone <%this-repo%> <%my-directory%>
+npm install
 ```
 
-## Server
+Then export the environment variable AuthHeader. This provides the authorization header for the server to use to authenticate against the Nexus REST API.
+```bash
+export AuthHeader="Basic <YourValueHere>"
+#TO-DO: Improve how this env variable is declared
+```
 
-## Client
+Then run the start script
+```bash
+npm start
+```
+
+You can get your clientID and appID by contacting Knowledge Architecture.
+
+## Server
+The server is a basic Express server and uses graphql-tools to create the GraphQL schema.
+
+## GraphiQL
+[GraphiQL](https://github.com/graphql/graphiql) is a graphical interactive in-browser GraphQL IDE.
+In this application you can find it at localhost:4000/graphiql
+
+## Example queries
+
+A list of projects with some additional details
+```javascript
+{
+  projectList {
+    modDate
+    projectDetails {
+      projectName
+      projectNumber
+      pic
+    }
+  }
+}
+```
