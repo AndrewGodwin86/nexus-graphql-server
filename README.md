@@ -11,6 +11,7 @@ A GraphQL wrapper around the Nexus REST API from Knowledge Architecture.
 - Getting Started
 - GraphiQL
 - Example Queries
+- TODO
 
 
 ## Overview
@@ -84,3 +85,8 @@ Copy and paste the following query snippets into GraphiQL and hit play!
         }
       }
 ```
+
+## TO-DO
+Resolver functions are a little verbose. Some efficiencies to be made there.
+
+Move contents of server folder into root directory.
