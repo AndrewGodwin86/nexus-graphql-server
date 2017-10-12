@@ -43,11 +43,16 @@ git clone <%this-repo%> <%my-directory%>
 npm install
 ```
 
-Then export the environment variable AuthHeader. This provides the authorization header for the server to use to authenticate against the Nexus REST API.
+Create a .env file in the `server` folder and define the AUTH_HEADER variable as follows:
 ```bash
-export AuthHeader="Basic <YourValueHere>"
-#TO-DO: Improve how this env variable is declared
+AUTH_HEADER="Basic <YourValue>"
+#TO-DO: Base64 encode ClientID/Key and pass to API requests
 ```
+Where `<YourValue>` is the base64 encoding of your KA Client ID and Client Key, combined but separated by a colon i.e. 
+```
+Base64(clientID:clientKey)
+```
+
 
 Then run the start script
 ```bash

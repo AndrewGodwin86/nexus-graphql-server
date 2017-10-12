@@ -1,19 +1,18 @@
 import express from 'express';
 import { graphqlExpress, graphiqlExpress } from 'graphql-server-express';
 import bodyParser from 'body-parser';
-import cors from 'cors';
 
 import { schema } from './src/schema';
 import { context } from './src/resolvers';
 
+require('dotenv').config();
+
 const PORT = 4000;
 const server = express();
 
-if (typeof process.env.AuthHeader === 'undefined') {
-  console.warn('WARNING: process.env.AuthHeader is not defined. Check README.md for more information');
+if (typeof process.env.AUTH_HEADER === 'undefined') {
+  console.warn('WARNING: process.env.AUTH_HEADER is not defined. Check README.md for more information');
 }
-
-server.use('*', cors({ origin: 'http://localhost:3000' }));
 
 server.use('/graphql', bodyParser.json(), graphqlExpress(request => ({
   schema,
@@ -24,6 +23,6 @@ server.use('/graphiql', graphiqlExpress({
   endpointURL: '/graphql'
 }));
 
-server.listen(PORT, () => 
+server.listen(PORT, () =>
   console.log(`GraphQL Server is now running on http://localhost:${PORT}`)
 );
