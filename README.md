@@ -39,7 +39,8 @@ Any questions related to the functionality of the Nexus REST API should be direc
 First clone this repo and run npm install
 
 ```bash
-git clone <%this-repo%> <%my-directory%>
+git clone https://github.com/andrewgodwin86/nexus-graphql-server <my-directory>
+cd <my-directory>/server
 npm install
 ```
 
@@ -48,7 +49,7 @@ Create a .env file in the `server` folder and define the AUTH_HEADER variable as
 AUTH_HEADER="Basic <YourValue>"
 #TO-DO: Base64 encode ClientID/Key and pass to API requests
 ```
-Where `<YourValue>` is the base64 encoding of your KA Client ID and Client Key, combined but separated by a colon i.e. 
+Where `<YourValue>` is the base64 encoding of your KA Client ID and Client Key, combined but separated by a colon i.e.
 ```
 Base64(clientID:clientKey)
 ```
@@ -59,27 +60,27 @@ Then run the start script
 npm start
 ```
 
-You can get your clientID and appID by contacting Knowledge Architecture.
-
 ## Server
 The server is a basic Express server and uses graphql-tools to create the GraphQL schema.
 
 ## GraphiQL
 [GraphiQL](https://github.com/graphql/graphiql) is a graphical interactive in-browser GraphQL IDE.
-In this application you can find it at localhost:4000/graphiql
+In this application you can find it at `localhost:4000/graphiql`
 
 ## Example queries
 
-A list of projects with some additional details
+Copy and paste the following query snippets into GraphiQL and hit play!
+
+1. A list of projects with some additional details
 ```javascript
-{
-  projectList {
-    modDate
-    projectDetails {
-      projectName
-      projectNumber
-      pic
-    }
-  }
-}
+    {
+        projectList {
+          modDate
+          projectDetails {
+            projectName
+            projectNumber
+            pic
+          }
+        }
+      }
 ```
