@@ -93,6 +93,7 @@ Copy and paste the following query snippets into GraphiQL and hit play!
 
 ## TO-DO
 - Base64 encode clientID and key
+- [Modularize the schema](http://dev.apollodata.com/tools/graphql-tools/generate-schema.html#modularizing)
 - Expand Overview/Why GraphQL
 - Add use cases
 - Add more example queries
