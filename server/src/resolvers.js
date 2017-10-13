@@ -6,30 +6,30 @@ const baseUrl = 'https://nexus5.knowledge-architecture.com/api/v1';
 const getEntityList = function(entityType, context, perPage) {
   if(perPage) {
     return fetch(`${baseUrl}/${entityType}/?perPage=${perPage}`,{
-        headers: {'Authorization': context.secrets.AUTH_HEADER}
+        headers: {'Authorization': context.secrets.Authorization}
       }).then(res => res.json()).then(data => data["results"])
   } else {
     return fetch(`${baseUrl}/${entityType}/`,{
-        headers: {'Authorization': context.secrets.AUTH_HEADER}
+        headers: context.secrets
       }).then(res => res.json()).then(data => data["results"])
   }
 
 };
 const getEntityByID = function(entityType, entityID, context) {
   return fetch(`${baseUrl}/${entityType}/${entityID}/`,{
-        headers: {'Authorization': context.secrets.AUTH_HEADER}
+        headers: {'Authorization': context.secrets.Authorization}
       }).then(res => res.json()).then(data => data["results"][0]);
 };
 
 const getRelatedEntityByType = function(entityType, entityID, relatedEntityType, context) {
   return fetch(`${baseUrl}/${entityType}/${entityID}/${relatedEntityType}/`,{
-        headers: {'Authorization': context.secrets.AUTH_HEADER}
+        headers: {'Authorization': context.secrets.Authorization}
       }).then(res => res.json()).then(data => data["results"]);
 };
 
 const getPublicMediaURL = function(mediaID, mediaSize, context) {
 	return fetch(`${baseUrl}/media/${mediaID}/url/${mediaSize}`,{
-		headers: {'Authorization': context.secrets.AUTH_HEADER}
+		headers: {'Authorization': context.secrets.Authorization}
 	}).then(res => res.json()).then(data => data["results"][0])
 }
 
@@ -194,9 +194,9 @@ export const resolvers = {
 };
 
 
-// Optional: Export a function to get context from the request. It accepts two
-// parameters - headers (lowercased http headers) and secrets (secrets defined
-// in secrets section). It must return an object (or a promise resolving to it).
+// Export a function to get context from the request. It accepts two
+// parameters - headers (lowercased http headers) and secrets
+//It must return an object (or a promise resolving to it).
 export function context(headers, secrets) {
   return {
     headers,
