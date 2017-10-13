@@ -10,7 +10,6 @@ A GraphQL wrapper around the Nexus REST API from Knowledge Architecture.
 - Nexus API
 - Server
 - Getting Started
-- GraphiQL
 - Example Queries
 - TO-DO
 
@@ -18,7 +17,8 @@ A GraphQL wrapper around the Nexus REST API from Knowledge Architecture.
 ## Overview
 This project wraps the Nexus REST API in a GraphQL endpoint.
 
-I'd been wanting to try out a real world example of using GraphQL for a little while
+I'd been wanting to try out a real world example of using GraphQL for a little while an
+and the Nexus API seemed like an obvious choice.
 
 This started off life in [Apollo Launchpad](https://launchpad.graphql.com/new)
 
@@ -46,22 +46,19 @@ cd <my-directory>/server
 npm install
 ```
 ### Create Environment Variables
-Create a .env file in the `server` folder and define the AUTH_HEADER variable as follows:
+Create a .env file in the `server` folder and define the KA_CLIENT_ID and KA_CLIENT_KEY variables as follows:
 ```bash
-AUTH_HEADER="Basic <YourValue>"
-#TO-DO: Base64 encode ClientID/Key and pass to API requests
+KA_CLIENT_ID="YourClientID"
+KA_CLIENT_KEY="YourClientKey"
 ```
-Where `<YourValue>` is the base64 encoding of your KA Client ID and Client Key, combined but separated by a colon i.e.
-```
-Base64(clientID:clientKey)
-```
+You can request your clientID and clientKey from Knowledge-Architecture.
 
 ### Start the Server
 Then run the start script
 ```bash
 npm start
 ```
-The GraphQL endpoint will be available at `localhost:4000`
+The GraphQL endpoint will be available at `localhost:4000/graphql`
 
 GraphiQL will be available at `localhost:4000/graphiql`
 
@@ -69,30 +66,37 @@ GraphiQL will be available at `localhost:4000/graphiql`
 ## Server
 The server is a basic Express server and uses graphql-tools to create the GraphQL schema.
 
-## GraphiQL
-[GraphiQL](https://github.com/graphql/graphiql) is a graphical interactive in-browser GraphQL IDE.
-In this application you can find it at `localhost:4000/graphiql`
-
 ## Example queries
 
 Copy and paste the following query snippets into GraphiQL and hit play!
 
-1. A list of projects with some additional details
+A list of projects with some additional details
 ```javascript
-    {
-        projectList {
-          modDate
-          projectDetails {
-            projectName
-            projectNumber
-            pic
-          }
-        }
-      }
+{
+  projectList {
+    modDate
+    projectDetails {
+      projectName
+      projectNumber
+      pic
+    }
+  }
+}
+```
+
+
+A list of Stream Items and their data
+```javascript
+{
+  streamItemList {
+    streamItemDetails {
+
+    }
+  }
+}
 ```
 
 ## TO-DO
-- Base64 encode clientID and key
 - [Modularize the schema](http://dev.apollodata.com/tools/graphql-tools/generate-schema.html#modularizing)
 - Expand Overview/Why GraphQL
 - Add use cases
