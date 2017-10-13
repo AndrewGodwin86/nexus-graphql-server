@@ -1,36 +1,29 @@
 # Nexus Graphql
 
-A GraphQL wrapper around the Nexus REST API from Knowledge Architecture.
+A wrapper around the Nexus REST API using GraphQL.
 
-## Table of Contents
+### Contents
 
 - Overview
-  - Use cases
-  - Why GraphQL?
 - Nexus API
-- Server
 - Getting Started
 - Example Queries
 - TO-DO
 
 
 ## Overview
-This project wraps the Nexus REST API in a GraphQL endpoint.
+I've been wanting to try out GraphQL for some time and the Nexus API seemed like an obvious choice.
 
-I'd been wanting to try out a real world example of using GraphQL for a little while an
-and the Nexus API seemed like an obvious choice.
+This project uses:
+- [apollo server (graphql-server-express)](https://github.com/apollographql/apollo-server)
+- [graphql-tools](https://github.com/apollographql/graphql-tools) to generate the schema
+- [GraphiQL](https://github.com/graphql/graphiql) for exploring the GraphQL
 
-This started off life in [Apollo Launchpad](https://launchpad.graphql.com/new)
-
-### Why GraphQL?
-
-### Use cases
-TO-DO
-
+This server started off its life in [Apollo Launchpad](https://launchpad.graphql.com/new)
 
 
 ## Nexus REST API
-The standard documentation of the Nexus API is available here:
+The documentation of the Nexus API is available here:
 https://developer.knowledge-architecture.com
 
 Any questions related to the functionality of the Nexus REST API should be directed to [support@knowledge-architecture.com](mailto:support@knowledge-architecture.com)
@@ -46,25 +39,21 @@ cd <my-directory>/server
 npm install
 ```
 ### Create Environment Variables
-Create a .env file in the `server` folder and define the KA_CLIENT_ID and KA_CLIENT_KEY variables as follows:
-```bash
+Create a file named `.env` in the `server` folder and define the KA_CLIENT_ID and KA_CLIENT_KEY variables as follows:
+```
 KA_CLIENT_ID="YourClientID"
 KA_CLIENT_KEY="YourClientKey"
 ```
-You can request your clientID and clientKey from Knowledge-Architecture.
+You can request your client ID and client key from Knowledge-Architecture.
 
 ### Start the Server
-Then run the start script
+Run the start script
 ```bash
 npm start
 ```
-The GraphQL endpoint will be available at `localhost:4000/graphql`
+The GraphQL endpoint will be available at `http://localhost:4000/graphql`
 
-GraphiQL will be available at `localhost:4000/graphiql`
-
-
-## Server
-The server is a basic Express server and uses graphql-tools to create the GraphQL schema.
+GraphiQL will be available at `http://localhost:4000/graphiql`
 
 ## Example queries
 
@@ -98,10 +87,9 @@ A list of Stream Items and their data
 
 ## TO-DO
 - [Modularize the schema](http://dev.apollodata.com/tools/graphql-tools/generate-schema.html#modularizing)
-- Expand Overview/Why GraphQL
-- Add use cases
 - Add more example queries
 - Resolver functions are a little verbose. Some efficiencies to be made there.
 - Use cache such as DataLoader to prevent duplicate queries
+- Expand ability to pass URL params to entity list requests
 
 Move contents of server folder into root directory.
