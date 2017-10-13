@@ -6,30 +6,30 @@ const baseUrl = 'https://nexus5.knowledge-architecture.com/api/v1';
 const getEntityList = function(entityType, context, perPage) {
   if(perPage) {
     return fetch(`${baseUrl}/${entityType}/?perPage=${perPage}`,{
-        headers: {'Authorization': context.secrets.AuthHeader}
+        headers: {'Authorization': context.secrets.AUTH_HEADER}
       }).then(res => res.json()).then(data => data["results"])
   } else {
     return fetch(`${baseUrl}/${entityType}/`,{
-        headers: {'Authorization': context.secrets.AuthHeader}
+        headers: {'Authorization': context.secrets.AUTH_HEADER}
       }).then(res => res.json()).then(data => data["results"])
   }
-  
+
 };
 const getEntityByID = function(entityType, entityID, context) {
   return fetch(`${baseUrl}/${entityType}/${entityID}/`,{
-        headers: {'Authorization': context.secrets.AuthHeader}
+        headers: {'Authorization': context.secrets.AUTH_HEADER}
       }).then(res => res.json()).then(data => data["results"][0]);
 };
 
 const getRelatedEntityByType = function(entityType, entityID, relatedEntityType, context) {
   return fetch(`${baseUrl}/${entityType}/${entityID}/${relatedEntityType}/`,{
-        headers: {'Authorization': context.secrets.AuthHeader}
+        headers: {'Authorization': context.secrets.AUTH_HEADER}
       }).then(res => res.json()).then(data => data["results"]);
 };
 
 const getPublicMediaURL = function(mediaID, mediaSize, context) {
 	return fetch(`${baseUrl}/media/${mediaID}/url/${mediaSize}`,{
-		headers: {'Authorization': context.secrets.AuthHeader}
+		headers: {'Authorization': context.secrets.AUTH_HEADER}
 	}).then(res => res.json()).then(data => data["results"][0])
 }
 
@@ -122,7 +122,7 @@ export const resolvers = {
     yearCompleted: (project) => project.loB_PR_CustVar02,
     originalArchitect: (project) => project.loB_PR_CustVar03,
     alias: (project) => project.loB_PR_CustVar04,
-    attribution: (project) => project.loB_PR_CustVar05  
+    attribution: (project) => project.loB_PR_CustVar05
   },
   Opportunity: {
     opportunityDetails: (opportunity, args, context) => {
