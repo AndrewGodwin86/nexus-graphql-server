@@ -1,7 +1,7 @@
 {
   "name": "Nexus-Graphql-Server",
-  "version": "1.0.0",
-  "description": "A simple GraphQL server",
+  "version": "0.0.1",
+  "description": "A GraphQL wrapper of the Nexus API",
   "main": "server.js",
   "scripts": {
     "start": "nodemon ./server.js --exec babel-node -e js",
