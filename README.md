@@ -19,7 +19,7 @@ This project uses:
 - [graphql-tools](https://github.com/apollographql/graphql-tools) to generate the schema
 - [GraphiQL](https://github.com/graphql/graphiql) for exploring the GraphQL
 
-This server started off its life in [Apollo Launchpad](https://launchpad.graphql.com/new)
+This project started off its life in [Apollo Launchpad](https://launchpad.graphql.com/new)
 
 
 ## Nexus REST API
