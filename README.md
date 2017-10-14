@@ -33,7 +33,7 @@ Any questions related to the functionality of the Nexus REST API should be direc
 ### Clone and Install
 Clone this repo and run npm install
 
-```bash
+```
 git clone https://github.com/andrewgodwin86/nexus-graphql-server <my-directory>
 cd <my-directory>/server
 npm install
@@ -48,7 +48,7 @@ You can request your client ID and client key from Knowledge-Architecture.
 
 ### Start the Server
 Run the start script
-```bash
+```
 npm start
 ```
 The GraphQL endpoint will be available at `http://localhost:4000/graphql`
