@@ -63,11 +63,14 @@ A list of projects with some additional details
 ```javascript
 {
   projectList {
-    modDate
     projectDetails {
-      projectName
       projectNumber
-      pic
+      projectName
+      clientName
+      city
+      state
+      country
+      employeeCount
     }
   }
 }
@@ -79,8 +82,15 @@ A list of Stream Items and their data
 {
   streamItemList {
     streamItemDetails {
-
-    }
+      titleWithEntityNames
+      contentWithEntityNames
+      dateStamp
+      displayEntityType
+      itemType
+      likeCount
+      commentCount
+      authorName
+    }  
   }
 }
 ```
@@ -88,8 +98,7 @@ A list of Stream Items and their data
 ## TO-DO
 - [Modularize the schema](http://dev.apollodata.com/tools/graphql-tools/generate-schema.html#modularizing)
 - Add more example queries
-- Resolver functions are a little verbose. Some efficiencies to be made there.
+- Not sure resolver functions are as efficient as they could be.
 - Use cache such as DataLoader to prevent duplicate queries
 - Expand ability to pass URL params to entity list requests
-
-Move contents of server folder into root directory.
+- Move contents of server folder into root directory.
