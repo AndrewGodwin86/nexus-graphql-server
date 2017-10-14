@@ -5,6 +5,8 @@ import bodyParser from 'body-parser';
 import { schema } from './src/schema';
 import { context } from './src/resolvers';
 
+// This is per the dotenv docs to bring in env variables
+// defined in .env
 require('dotenv').config();
 
 const PORT = 4000;
@@ -17,9 +19,9 @@ const btoa = function(str) {
 // Encode ClientID:ClientKey to use in request headers
 const authorizationB64 = btoa(process.env.KA_CLIENT_ID + ':' + process.env.KA_CLIENT_KEY);
 const authHeader = {'Authorization':'Basic '+ authorizationB64};
-;
-if (typeof process.env.AUTH_HEADER === 'undefined') {
-  console.warn('WARNING: process.env.AUTH_HEADER is not defined. Check README.md for more information');
+
+if (typeof process.env.KA_CLIENT_ID === 'undefined' || process.env.KA_CLIENT_KEY === 'undefined') {
+  console.warn('WARNING: undefined ClientID or ClientKey. Check .env file');
 }
 
 server.use('/graphql', bodyParser.json(), graphqlExpress(request => ({
