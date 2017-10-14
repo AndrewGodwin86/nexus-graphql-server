@@ -20,6 +20,7 @@ const btoa = function(str) {
 const authorizationB64 = btoa(process.env.KA_CLIENT_ID + ':' + process.env.KA_CLIENT_KEY);
 const authHeader = {'Authorization':'Basic '+ authorizationB64};
 
+// Warn if clientID or key are missing
 if (typeof process.env.KA_CLIENT_ID === 'undefined' || process.env.KA_CLIENT_KEY === 'undefined') {
   console.warn('WARNING: undefined ClientID or ClientKey. Check .env file');
 }
