@@ -1,6 +1,6 @@
 # Nexus GraphQL Server
 
-A wrapper around the Nexus REST API using GraphQL.
+A first stab at a wrapper around the Nexus REST API using GraphQL.
 
 ### Contents
 
@@ -13,6 +13,8 @@ A wrapper around the Nexus REST API using GraphQL.
 
 ## Overview
 I've been wanting to try out GraphQL for some time and the Nexus API seemed like an obvious choice.
+
+Using GraphQL with the Nexus API could simplify syncing operations, reducing the number of round trips between the client and Nexus API.
 
 This project uses:
 - [apollo server (graphql-server-express)](https://github.com/apollographql/apollo-server)
@@ -91,12 +93,18 @@ A list of Stream Items and their data
       commentCount
       authorName
       mentionsList {
+        entityID
+        entityType
         entityName
+        communitySiteID
+        publicSite
+        deleted
       }
       hashtagsList {
         hashtagID
       }
       likesList {
+        authorID
         authorName
       }
 
