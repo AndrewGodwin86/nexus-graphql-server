@@ -90,6 +90,16 @@ A list of Stream Items and their data
       likeCount
       commentCount
       authorName
+      mentionsList {
+        entityName
+      }
+      hashtagsList {
+        hashtagID
+      }
+      likesList {
+        authorName
+      }
+
     }  
   }
 }
