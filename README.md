@@ -1,4 +1,4 @@
-# Nexus Graphql
+# Nexus GraphQL Server
 
 A wrapper around the Nexus REST API using GraphQL.
 
