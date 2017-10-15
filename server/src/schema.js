@@ -752,6 +752,7 @@ const typeDefs = `
     mentionAuthor: String
     authorName: String
     dateStamp: String
+    deleted: Int
     communitySiteID: String
     publicSite: Int
 	}
