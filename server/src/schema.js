@@ -13,6 +13,7 @@ import Project from './typedefs/project';
 import Relationship from './typedefs/relationship';
 import StreamItem from './typedefs/streamitem';
 import TextLibrary from './typedefs/textlibrary';
+import EntityColumnMapping from './typedefs/entitycolumnmapping';
 
 import { resolvers } from './resolvers';
 
@@ -34,7 +35,7 @@ const Queries = `
 `;
 
 const schema = makeExecutableSchema({
-  typeDefs: [Queries, Entity, ...Project, ...Employee, Company, Contact, Media, Opportunity, Relationship, TextLibrary, StreamItem ],
+  typeDefs: [Queries, Entity, ...Project, ...Employee, Company, Contact, Media, Opportunity, Relationship, TextLibrary, StreamItem, EntityColumnMapping ],
   resolvers
 });
 export { schema };
