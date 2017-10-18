@@ -16,6 +16,12 @@ I've been wanting to try out GraphQL for some time and the Nexus API seemed like
 
 Using GraphQL with the Nexus API could simplify syncing operations, reducing the number of round trips between the client and Nexus API.
 
+Here's a modified image originally created for the
+[GraphQL vs REST](https://dev-blog.apollodata.com/graphql-vs-rest-5d425123e34b)
+post by [@stubailo](https://github.com/stubailo)
+
+![GraphQL vs REST](assets/NexusGraphQL.jpg)
+
 This project uses:
 - [apollo server (graphql-server-express)](https://github.com/apollographql/apollo-server)
 - [graphql-tools](https://github.com/apollographql/graphql-tools) to generate the schema
