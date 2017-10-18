@@ -59,32 +59,41 @@ export const resolvers = {
     entities: () => {
       return entities;
     },
+    project: (root, args, context) => {
+      return getEntityByID("Projects", args.projectID, context);
+    },
     projectList: (root, args, context) => {
       return getEntityList("projects", context, args.perPage);
     },
-    getProject: (root, args, context) => {
-      return getEntityByID("Projects", args.projectID, context);
+    opportunity: (root, args, context) => {
+      return getEntityByID("opportunities", args.opportunityID, context);
     },
     opportunityList: (root, args, context) => {
       return getEntityList("opportunities", context, args.perPage);
     },
+    employee: (root, args, context) => {
+      return getEntityByID("employees", args.employeeID, context);
+    },
     employeeList: (root, args, context) => {
       return getEntityList("employees", context, args.perPage);
     },
-    getEmployee: (root, args, context) => {
-      return getEntityByID("employees", args.employeeID, context);
+    contact: (root, args, context) => {
+      return getEntityByID("contacts", args.contactID, context);
+    },
+    contactList: (root, args, context) => {
+      return getEntityList("contacts", context, args.perPage);
+    },
+    company: (root, args, context) => {
+      return getEntityByID("companies", args.companyID, context);
     },
     companyList: (root, args, context) => {
       return getEntityList("companies", context, args.perPage);
     },
-    contactList: (root, args, context) => {
-			return getEntityList("contacts", context, args.perPage);
+    streamItem: (root, args, context) => {
+      return getEntityByID("streamitems", args.itemID, context);
     },
     streamItemList: (root, args, context) => {
       return getEntityList("streamItems", context, args.perPage);
-    },
-    getStreamItem: (root, args, context) => {
-      return getEntityByID("streamitems", args.itemID, context);
     },
     mediaList: (root, args, context) => {
     	return getEntityList("media", context, args.perPage);
