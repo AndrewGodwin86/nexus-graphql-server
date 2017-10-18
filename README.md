@@ -46,7 +46,7 @@ Create a file named `.env` in the `server` folder and define the KA_CLIENT_ID an
 KA_CLIENT_ID="YourClientID"
 KA_CLIENT_KEY="YourClientKey"
 ```
-You can request your client ID and client key from Knowledge-Architecture.
+You can request your client ID and client key from [Knowledge Architecture](mailto:support@knowledge-architecture.com).
 
 ### Start the Server
 Run the start script
