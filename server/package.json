@@ -1,7 +1,12 @@
 {
-  "name": "Nexus-Graphql-Server",
+  "name": "nexus-graphql-server",
   "version": "0.0.1",
   "description": "A GraphQL wrapper of the Nexus API",
+  "keywords": ["graphql", "apollo-server", "nexus", "knowledge architecture"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AndrewGodwin86/nexus-graphql-server.git"
+  },
   "main": "server.js",
   "scripts": {
     "start": "nodemon ./server.js --exec babel-node -e js",
