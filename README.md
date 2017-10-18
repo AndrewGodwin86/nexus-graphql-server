@@ -18,7 +18,8 @@ Using GraphQL with the Nexus API could simplify syncing operations, reducing the
 
 Here's a modified image originally created for the
 [GraphQL vs REST](https://dev-blog.apollodata.com/graphql-vs-rest-5d425123e34b)
-post by [@stubailo](https://github.com/stubailo)
+post by [@stubailo](https://github.com/stubailo) which tries to explain one of the differences
+between REST and GraphQL.
 
 ![GraphQL vs REST](assets/NexusGraphQL.jpg)
 
