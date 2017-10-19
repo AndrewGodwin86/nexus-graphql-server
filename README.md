@@ -22,6 +22,9 @@ post by [@stubailo](https://github.com/stubailo) which tries to explain one of t
 between REST and GraphQL.
 
 ![GraphQL vs REST](assets/NexusGraphQL.jpg)
+This shows that with GraphQL, you can send one query to the GraphQL server which then
+grabs the separate resources and returns them in one response.
+With REST, each resource requires an individual request and response between the client and REST API.
 
 This project uses:
 - [apollo server (graphql-server-express)](https://github.com/apollographql/apollo-server)
