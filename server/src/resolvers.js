@@ -151,16 +151,16 @@ export const resolvers = {
     	return getRelatedEntityByType("employees", employee.employeeID, "certifications", context);
   	},
     degreesEarnedDetail: (employee, args, context) => {
-  	return getRelatedEntityByType("employees", employee.employeeID, "degrees", context);
+  	   return getRelatedEntityByType("employees", employee.employeeID, "degrees", context);
   	},
-	registrationsDetail: (employee, args, context) => {
-	return getRelatedEntityByType("employees", employee.employeeID, "registrations", context);
+  	registrationsDetail: (employee, args, context) => {
+  	   return getRelatedEntityByType("employees", employee.employeeID, "registrations", context);
   	},
     employeeCompanies: (employee, args, context) => {
     	return getRelatedEntityByType("employees", employee.employeeID, "companies", context);
   	},
     employeeContacts: (employee, args, context) => {
-        return getRelatedEntityByType("employees", employee.employeeID, "contacts", context);
+      return getRelatedEntityByType("employees", employee.employeeID, "contacts", context);
     },
   	employeeOpportunities: (employee, args, context) => {
     	return getRelatedEntityByType("employees", employee.employeeID, "opportunities", context);
