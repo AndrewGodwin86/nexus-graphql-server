@@ -138,6 +138,14 @@ export const resolvers = {
       return getEntityByID("opportunities", opportunity.entityID, context);
     }
   },
+  OpportunityDetails: {
+    opportunityContacts: (opportunity, args, context) => {
+      return getRelatedEntityByType("opportunities", opportunity.opportunityID, "contacts", context);
+    },
+    opportunityEmployees: (opportunity, args, context) => {
+      return getRelatedEntityByType("opportunities", opportunity.opportunityID, "employees", context);
+    }
+  },
   Employee: {
     employeeDetails: (employee, args, context) => {
       return getEntityByID("employees", employee.entityID, context);
