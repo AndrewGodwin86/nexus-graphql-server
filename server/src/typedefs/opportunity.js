@@ -1,3 +1,5 @@
+import RelatedEntity from './relatedentity';
+
 const Opportunity = `
   type Opportunity {
     entityID: ID
@@ -8,7 +10,9 @@ const Opportunity = `
   type OpportunityDetails {
     _Link: String
     _Employees: String
+    opportunityEmployees: [RelatedEntity]
     _Contacts: String
+    opportunityContacts: [RelatedEntity]
     opportunityID: String
     assocProjectName: String
     assocProjectNumber: String
@@ -62,4 +66,4 @@ const Opportunity = `
   }
 `;
 
-export default Opportunity;
+export default [Opportunity,RelatedEntity];

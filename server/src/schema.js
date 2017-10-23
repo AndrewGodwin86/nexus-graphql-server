@@ -39,7 +39,19 @@ const Queries = `
 `;
 
 const schema = makeExecutableSchema({
-  typeDefs: [Queries, Entity, ...Project, ...Employee, Company, Contact, Media, Opportunity, Relationship, TextLibrary, StreamItem, EntityColumnMapping ],
+  typeDefs: [ Queries,
+              Entity,
+              ...Project,
+              ...Employee,
+              Company,
+              Contact,
+              ...Opportunity,
+              Media,
+              Relationship,
+              TextLibrary,
+              StreamItem,
+              EntityColumnMapping
+            ],
   resolvers
 });
 export { schema };
