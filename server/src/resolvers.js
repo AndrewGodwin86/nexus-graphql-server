@@ -182,6 +182,23 @@ export const resolvers = {
       return getEntityByID("companies", company.entityID, context);
     }
   },
+  CompanyDetails: {
+    companyAddresses: (company, args, context) => {
+      return getRelatedEntityByType("companies", company.companyID, "addresses", context);
+    },
+    companyEmployees: (company, args, context) => {
+      return getRelatedEntityByType("companies", company.companyID, "employees", context);
+    },
+    companyContacts: (company, args, context) => {
+      return getRelatedEntityByType("companies", company.companyID, "contacts", context);
+    },
+    companyProjects: (company, args, context) => {
+      return getRelatedEntityByType("companies", company.companyID, "projects", context);
+    },
+    companyOpportunities: (company, args, context) => {
+      return getRelatedEntityByType("companies", company.companyID, "opportunities", context);
+    },
+  },
   Contact: {
     contactDetails: (contact, args, context) => {
       return getEntityByID("contacts", contact.entityID, context);

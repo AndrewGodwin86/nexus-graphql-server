@@ -43,7 +43,7 @@ const schema = makeExecutableSchema({
               Entity,
               ...Project,
               ...Employee,
-              Company,
+              ...Company,
               Contact,
               ...Opportunity,
               Media,

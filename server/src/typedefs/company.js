@@ -1,3 +1,5 @@
+import RelatedEntity from './relatedentity';
+
 const Company = `
   type Company {
     entityID: ID
@@ -8,10 +10,15 @@ const Company = `
   type CompanyDetails {
     _Link: String
     _Addresses: String
+    companyAddresses: [CompanyAddress]
     _Employees: String
+    companyEmployees: [RelatedEntity]
     _Contacts: String
+    companyContacts: [RelatedEntity]
     _Projects: String
+    companyProjects: [RelatedEntity]
     _Opportunities: String
+    companyOpportunities: [RelatedEntity]
     companyID: String
     addressDesc: String
     city: String
@@ -114,6 +121,23 @@ const Company = `
     primaryImageID: String
     modDate: String
   }
+  type CompanyAddress {
+    companyID: ID
+    addressDesc: String
+    streetAddress1: String
+    streetAddress2: String
+    streetAddress3: String
+    streetAddress4: String
+    city: String
+    state: String
+    zip: String
+    country: String
+    phone: String
+    primaryInd: String
+    modDate: String
+    accounting: String
+    showInSynthesis: String
+  }
 `;
 
-export default Company;
+export default [Company, RelatedEntity];
