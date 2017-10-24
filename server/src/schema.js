@@ -44,7 +44,7 @@ const schema = makeExecutableSchema({
               ...Project,
               ...Employee,
               ...Company,
-              Contact,
+              ...Contact,
               ...Opportunity,
               Media,
               Relationship,

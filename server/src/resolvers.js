@@ -204,6 +204,17 @@ export const resolvers = {
       return getEntityByID("contacts", contact.entityID, context);
     }
   },
+  ContactDetails: {
+    contactEmployees: (contact, args, context) => {
+      return getRelatedEntityByType("contacts", contact.contactID, "employees", context);
+    },
+    contactProjects: (contact, args, context) => {
+      return getRelatedEntityByType("contacts", contact.contactID, "projects", context);
+    },
+    contactOpportunities: (contact, args, context) => {
+      return getRelatedEntityByType("contacts", contact.contactID, "opportunities", context);
+    }
+  },
   StreamItem: {
     streamItemDetails: (streamItem, args, context) => {
     	return getEntityByID("streamItems", streamItem.entityID, context);

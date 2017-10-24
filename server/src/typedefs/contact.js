@@ -1,3 +1,5 @@
+import RelatedEntity from './relatedentity';
+
 const Contact = `
   type Contact {
     entityID: ID
@@ -8,9 +10,12 @@ const Contact = `
   type ContactDetails {
     _Link: String
     _Employees: String
+    contactEmployees: [RelatedEntity]
     _Company: String
     _Projects: String
+    contactProjects: [RelatedEntity]
     _Opportunities: String
+    contactOpportunities: [RelatedEntity]
     contactID: String
     addressDesc: String
     campaignCount: Int
@@ -110,4 +115,4 @@ const Contact = `
   }
 `;
 
-export default Contact
+export default [Contact, RelatedEntity];
