@@ -4,6 +4,19 @@ export const resolvers = {
       console.log(project.projectID)
       return dataSources.nexusAPI.getRelatedEntity('projects', project.projectID, 'employees');
     },
+    projectCompanies: (project, args, context) => {
+      return dataSources.nexusAPI.getRelatedEntity('projects', project.projectID, 'companies');
+    },
+    projectContacts: (project, args, context) => {
+      return dataSources.nexusAPI.getRelatedEntity('projects', project.projectID, 'contacts');
+    },
+    projectDescriptions: (project, args, context) => {
+      return dataSources.nexusAPI.getRelatedEntity('projects', project.projectID, 'descriptions');
+    },
+    projectAwards: (project, args, context) => {
+      return dataSources.nexusAPI.getRelatedEntity("projects", project.projectID, 'awards', context);
+    },
+    // TO-DO: projectMedia...
   },
   Entity: {
     project: async(entity, args, { dataSources }) => {
