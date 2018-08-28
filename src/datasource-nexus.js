@@ -1,4 +1,3 @@
-import { ApolloServer} from 'apollo-server';
 import { RESTDataSource } from 'apollo-datasource-rest';
 
 export default class NexusAPI extends RESTDataSource {

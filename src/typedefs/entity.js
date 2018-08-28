@@ -1,7 +1,9 @@
 const Entity = `
   type Entity {
-    id: ID!
-    name: String
+    entityID: ID!
+    entityName: String
+    modDate: String
+    project: Project
   }
 `;
 

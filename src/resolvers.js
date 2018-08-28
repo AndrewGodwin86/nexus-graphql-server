@@ -1,4 +1,29 @@
-import fetch from 'node-fetch';
+export const resolvers = {
+  Project: {
+    projectEmployees: async (project,  args, { dataSources }) => {
+      console.log(project.projectID)
+      return dataSources.nexusAPI.getRelatedEntity('projects', project.projectID, 'employees');
+    },
+  },
+  Entity: {
+    project: async(entity, args, { dataSources }) => {
+      return dataSources.nexusAPI.getProject(entity.entityID);
+    }
+  },
+  Query: {
+    project: async (_source, { projectID }, { dataSources }) => {
+      return dataSources.nexusAPI.getProject(projectID);
+    },
+    employee: async (_source, { id }, { dataSources }) => {
+      return dataSources.nexusAPI.getEntity('employees', id);
+    },
+    projects: async (_source, args, {dataSources}) => {
+      return dataSources.nexusAPI.getEntities('projects');
+    }
+  },
+};
+
+/*import fetch from 'node-fetch';
 
 // Set the baseUrl and define general request structure for the Nexus call
 const baseUrl = 'https://nexus5.knowledge-architecture.com/api/v1';
@@ -247,4 +272,4 @@ export function context(headers, secrets) {
     headers,
     secrets,
   };
-};
+};*/

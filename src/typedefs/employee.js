@@ -2,12 +2,6 @@ import RelatedEntity from './relatedentity';
 
 const Employee = `
   type Employee {
-    entityID: ID
-    entityName: String
-    modDate: String
-    employeeDetails(employeeID: String): EmployeeDetails
-  }
-  type EmployeeDetails {
     _Link: String
     _Certifications: String
     _Affiliations: String

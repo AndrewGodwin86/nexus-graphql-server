@@ -3,20 +3,20 @@ import {
 } from 'apollo-server';
 
 import Entity from './typedefs/entity';
-import Company from './typedefs/company';
-import Contact from './typedefs/contact';
+import Project from './typedefs/project';
 import Employee from './typedefs/employee';
+/*import Company from './typedefs/company';
+import Contact from './typedefs/contact';
 import Media from './typedefs/media';
 import Opportunity from './typedefs/opportunity';
-import Project from './typedefs/project';
 import Relationship from './typedefs/relationship';
 import StreamItem from './typedefs/streamitem';
 import TextLibrary from './typedefs/textlibrary';
-import EntityColumnMapping from './typedefs/entitycolumnmapping';
+import EntityColumnMapping from './typedefs/entitycolumnmapping';*/
 
 import { resolvers } from './resolvers';
 
-const Queries = `
+/*const Queries = `
   type Query { # This type specifies the entry points into our API.
     entities: [Entity]    # "[]" means this is a list of entities
     company(companyID: ID!): CompanyDetails
@@ -35,6 +35,13 @@ const Queries = `
     streamItemList(perPage: Int): [StreamItem]
     relationshipList(perPage: Int): [Relationship]
   }
+`;*/
+const Queries = `
+  type Query {
+    projects(status: String): [Entity]
+    project(projectID:ID): Project
+    employee(id:ID): Employee
+  }
 `;
 
 const schema = makeExecutableSchema({
@@ -42,14 +49,14 @@ const schema = makeExecutableSchema({
               Entity,
               ...Project,
               ...Employee,
-              ...Company,
+              /*...Company,
               ...Contact,
               ...Opportunity,
               Media,
               Relationship,
               TextLibrary,
               StreamItem,
-              EntityColumnMapping
+              EntityColumnMapping*/
             ],
   resolvers
 });
