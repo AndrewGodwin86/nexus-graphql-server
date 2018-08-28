@@ -62,19 +62,14 @@ const Project = `
     loB_PR_CustNum04: Float
     loB_PR_CustNum05: Float
     loB_PR_CustTxt01: String
-    sectors: String
     loB_PR_CustTxt02: String
     loB_PR_CustTxt03: String
     loB_PR_CustTxt04: String
     loB_PR_CustTxt05: String
     loB_PR_CustVar01: String
-    attribution: String
     loB_PR_CustVar02: String
-    yearCompleted: String
     loB_PR_CustVar03: String
-    originalArchitect: String
     loB_PR_CustVar04: String
-    alias: String
     loB_PR_CustVar05: String
     loB_PR_CustVar06: String
     loB_PR_CustVar07: String
@@ -109,8 +104,6 @@ const Project = `
     piM_PR_CustVar03: String
     piM_PR_CustVar04: String
     piM_PR_CustVar05: String
-    piM_ProjectRecord: String
-    piM_ProjectWebsite: String
     piM_ProjectRecord: String
     piM_ProjectWebsite: String
     profileLastModifiedBy: String
