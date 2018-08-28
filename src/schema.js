@@ -1,6 +1,4 @@
-import {
-  makeExecutableSchema,
-} from 'apollo-server';
+import { makeExecutableSchema } from 'apollo-server';
 
 import Entity from './typedefs/entity';
 import Project from './typedefs/project';
@@ -38,9 +36,10 @@ import { resolvers } from './resolvers';
 `;*/
 const Queries = `
   type Query {
-    projects(status: String): [Entity]
+    projects(status: String, country: String): [Entity]
     project(projectID:ID): Project
     employee(id:ID): Employee
+    employees(status: String): [Entity]
   }
 `;
 

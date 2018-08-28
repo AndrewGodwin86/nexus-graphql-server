@@ -4,6 +4,7 @@ const Entity = `
     entityName: String
     modDate: String
     project: Project
+    employee: Employee
   }
 `;
 

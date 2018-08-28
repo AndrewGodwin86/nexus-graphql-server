@@ -17,13 +17,9 @@ export default class NexusAPI extends RESTDataSource {
     request.headers.set('Authorization', authHeader);
   }
 
-  async getProject(id) {
-    const data = await this.get(`projects/${id}`);
-    return data.results[0];
-  }
-
   async getEntity(entityType, id) {
-    return this.get(`${entityType}/${id}`);
+    const data = await this.get(`${entityType}/${id}`);
+    return data.results[0];
   }
 
   async getEntities(entityType, status="Active") {
