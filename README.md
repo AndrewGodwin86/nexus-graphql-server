@@ -125,9 +125,9 @@ A list of Stream Items and their data
 ```
 
 ## TO-DO
-- Add more example queries
-- Allow related entity queries in Company/Contact/Opportunity like Project/Employee
-- Not sure resolver functions are as efficient as they could be.
-- Use cache such as DataLoader to prevent duplicate queries
-- Expand ability to pass URL params to entity list requests
-- Move contents of server folder into root directory.
+- [ ] Add more example queries
+- [x] Allow related entity queries in Company/Contact/Opportunity like Project/Employee
+- [ ] Not sure resolver functions are as efficient as they could be.
+- [ ] Use cache such as DataLoader to prevent duplicate queries
+- [ ] Expand ability to pass URL params to entity list requests
+- [ ] Move contents of server folder into root directory.
