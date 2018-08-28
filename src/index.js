@@ -1,13 +1,13 @@
 import express from 'express';
 import { graphqlExpress, graphiqlExpress } from 'graphql-server-express';
 import bodyParser from 'body-parser';
-
+import dotenv from 'dotenv';
 import { schema } from './schema';
 import { context } from './resolvers';
 
 // This is per the dotenv docs to bring in env variables
 // defined in .env
-require('dotenv').config();
+dotenv.config();
 
 const PORT = 4000;
 const server = express();
