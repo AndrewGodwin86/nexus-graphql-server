@@ -20,8 +20,10 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/node": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
     "nodemon": "^1.17.5"
   },
   "dependencies": {
