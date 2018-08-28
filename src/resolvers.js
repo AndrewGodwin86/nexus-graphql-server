@@ -4,17 +4,17 @@ export const resolvers = {
       console.log(project.projectID)
       return dataSources.nexusAPI.getRelatedEntity('projects', project.projectID, 'employees');
     },
-    projectCompanies: (project, args, context) => {
+    projectCompanies: (project, args, { dataSources }) => {
       return dataSources.nexusAPI.getRelatedEntity('projects', project.projectID, 'companies');
     },
-    projectContacts: (project, args, context) => {
+    projectContacts: (project, args, { dataSources }) => {
       return dataSources.nexusAPI.getRelatedEntity('projects', project.projectID, 'contacts');
     },
-    projectDescriptions: (project, args, context) => {
+    projectDescriptions: (project, args, { dataSources }) => {
       return dataSources.nexusAPI.getRelatedEntity('projects', project.projectID, 'descriptions');
     },
-    projectAwards: (project, args, context) => {
-      return dataSources.nexusAPI.getRelatedEntity("projects", project.projectID, 'awards', context);
+    projectAwards: (project, args, { dataSources }) => {
+      return dataSources.nexusAPI.getRelatedEntity("projects", project.projectID, 'awards');
     },
     // TO-DO: projectMedia...
   },
