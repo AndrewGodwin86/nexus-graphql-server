@@ -1,7 +1,6 @@
 import {
   makeExecutableSchema,
-  addMockFunctionsToSchema,
-} from 'graphql-tools';
+} from 'apollo-server';
 
 import Entity from './typedefs/entity';
 import Company from './typedefs/company';

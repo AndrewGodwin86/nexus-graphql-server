@@ -2,7 +2,12 @@
   "name": "nexus-graphql-server",
   "version": "0.0.1",
   "description": "A GraphQL wrapper of the Nexus API",
-  "keywords": ["graphql", "apollo-server", "nexus", "knowledge architecture"],
+  "keywords": [
+    "graphql",
+    "apollo-server",
+    "nexus",
+    "knowledge architecture"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/AndrewGodwin86/nexus-graphql-server.git"
@@ -15,19 +20,25 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "babel-cli": "^6.24.0",
-    "babel-preset-es2015": "^6.24.0",
-    "babel-preset-stage-0": "^6.22.0",
-    "nodemon": "^1.11.0"
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "nodemon": "^1.17.5"
   },
   "dependencies": {
+    "apollo-boost": "^0.1.15",
+    "apollo-cache-inmemory": "^1.2.9",
+    "apollo-client": "^2.4.1",
+    "apollo-datasource-rest": "^0.1.4",
+    "apollo-link-http": "^1.5.4",
+    "apollo-server": "^2.0.5",
     "body-parser": "^1.17.1",
     "buffer": "^5.0.8",
     "cors": "^2.8.4",
-    "dotenv": "^4.0.0",
+    "dotenv": "^5.0.1",
     "express": "^4.15.2",
-    "graphql": "^0.9.1",
+    "graphql": "^0.13.2",
     "graphql-server-express": "^0.6.0",
+    "graphql-tag": "^2.9.2",
     "graphql-tools": "^0.10.1",
     "node-fetch": "^1.7.3"
   }
