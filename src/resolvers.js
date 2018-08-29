@@ -72,6 +72,14 @@ export const resolvers = {
       return dataSources.nexusAPI.getRelatedEntity('contacts', contact.contactID, 'opportunities');
     }
   },
+  Opportunity: {
+    opportunityContacts: (opportunity, args, { dataSources }) => {
+      return dataSources.nexusAPI.getRelatedEntity('opportunities', opportunity.opportunityID, 'contacts');
+    },
+    opportunityEmployees: (opportunity, args, { dataSources }) => {
+      return dataSources.nexusAPI.getRelatedEntity('opportunities', opportunity.opportunityID, 'employees');
+    }
+  },
   Entity: {
     project: async(entity, args, { dataSources }) => {
       return dataSources.nexusAPI.getEntity('projects', entity.entityID);
@@ -84,6 +92,9 @@ export const resolvers = {
     },
     contact: async (entity, args, { dataSources }) => {
       return dataSources.nexusAPI.getEntity('contacts', entity.entityID);
+    },
+    opportunity: async (entity, args, { dataSources }) => {
+      return dataSources.nexusAPI.getEntity('opportunities', entity.entityID);
     }
   },
   Query: {
@@ -106,10 +117,16 @@ export const resolvers = {
       return dataSources.nexusAPI.getEntities('companies');
     },
     contact: async (_source, { contactID }, { dataSources }) => {
-      return dataSources.nexusAPI.getEntity('contact', contactID);
+      return dataSources.nexusAPI.getEntity('contacts', contactID);
     },
     contacts: async (_source, args, {dataSources}) => {
       return dataSources.nexusAPI.getEntities('contacts');
+    },
+    opportunity: async (_source, { opportunityID }, { dataSources }) => {
+      return dataSources.nexusAPI.getEntity('opportunities', opportunityID);
+    },
+    contacts: async (_source, args, {dataSources}) => {
+      return dataSources.nexusAPI.getEntities('opportunities');
     },
   },
 };

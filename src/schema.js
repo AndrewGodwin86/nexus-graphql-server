@@ -5,8 +5,8 @@ import Project from './typedefs/project';
 import Employee from './typedefs/employee';
 import Company from './typedefs/company';
 import Contact from './typedefs/contact';
-/*import Media from './typedefs/media';
 import Opportunity from './typedefs/opportunity';
+/*import Media from './typedefs/media';
 import Relationship from './typedefs/relationship';
 import StreamItem from './typedefs/streamitem';
 import TextLibrary from './typedefs/textlibrary';
@@ -44,6 +44,8 @@ const Queries = `
     companies(status: String): [Entity]
     contact(contactID: ID): Contact
     contacts(status: String): [Entity]
+    opportunity(opportunityID: ID): Opportunity
+    opportunities: [Entity]
   }
 `;
 
@@ -54,8 +56,8 @@ const schema = makeExecutableSchema({
               ...Employee,
               ...Company,
               ...Contact,
-              /*...Opportunity,
-              Media,
+              ...Opportunity,
+              /*Media,
               Relationship,
               TextLibrary,
               StreamItem,

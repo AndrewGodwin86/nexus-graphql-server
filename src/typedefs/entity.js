@@ -7,6 +7,7 @@ const Entity = `
     employee: Employee
     company: Company
     contact: Contact
+    opportunity: Opportunity
   }
 `;
 

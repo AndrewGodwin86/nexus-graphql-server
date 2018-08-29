@@ -1,12 +1,6 @@
 import RelatedEntity from './relatedentity';
 
 const Opportunity = `
-  type Opportunity {
-    entityID: ID
-    entityName: String
-    modDate: String
-    opportunityDetails(opportunityID: String): OpportunityDetails
-  }
   type OpportunityDetails {
     _Link: String
     _Employees: String
