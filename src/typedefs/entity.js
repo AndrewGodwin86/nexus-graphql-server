@@ -5,6 +5,8 @@ const Entity = `
     modDate: String
     project: Project
     employee: Employee
+    company: Company
+    contact: Contact
   }
 `;
 

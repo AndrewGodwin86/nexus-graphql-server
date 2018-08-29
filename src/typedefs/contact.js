@@ -2,12 +2,6 @@ import RelatedEntity from './relatedentity';
 
 const Contact = `
   type Contact {
-    entityID: ID
-    entityName: String
-    modDate: String
-    contactDetails(contactID: String): ContactDetails
-  }
-  type ContactDetails {
     _Link: String
     _Employees: String
     contactEmployees: [RelatedEntity]

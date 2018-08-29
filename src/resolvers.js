@@ -14,35 +14,63 @@ export const resolvers = {
       return dataSources.nexusAPI.getRelatedEntity('projects', project.projectID, 'descriptions');
     },
     projectAwards: (project, args, { dataSources }) => {
-      return dataSources.nexusAPI.getRelatedEntity("projects", project.projectID, 'awards');
+      return dataSources.nexusAPI.getRelatedEntity('projects', project.projectID, 'awards');
     },
     // TO-DO: projectMedia...
   },
   Employee: {
     affiliationsDetail: (employee, args, { dataSources }) => {
-    	return dataSources.nexusAPI.getRelatedEntity("employees", employee.employeeID, "affiliations");
+    	return dataSources.nexusAPI.getRelatedEntity('employees', employee.employeeID, 'affiliations');
   	},
     certificationsDetail: (employee, args, { dataSources }) => {
-    	return dataSources.nexusAPI.getRelatedEntity("employees", employee.employeeID, "certifications");
+    	return dataSources.nexusAPI.getRelatedEntity('employees', employee.employeeID, 'certifications');
   	},
     degreesEarnedDetail: (employee, args, { dataSources }) => {
-  	   return dataSources.nexusAPI.getRelatedEntity("employees", employee.employeeID, "degrees");
+  	   return dataSources.nexusAPI.getRelatedEntity('employees', employee.employeeID, 'degrees');
   	},
   	registrationsDetail: (employee, args, { dataSources }) => {
-  	   return dataSources.nexusAPI.getRelatedEntity("employees", employee.employeeID, "registrations");
+  	   return dataSources.nexusAPI.getRelatedEntity('employees', employee.employeeID, 'registrations');
   	},
     employeeCompanies: (employee, args, { dataSources }) => {
-    	return dataSources.nexusAPI.getRelatedEntity("employees", employee.employeeID, "companies");
+    	return dataSources.nexusAPI.getRelatedEntity('employees', employee.employeeID, 'companies');
   	},
     employeeContacts: (employee, args, { dataSources }) => {
-      return dataSources.nexusAPI.getRelatedEntity("employees", employee.employeeID, "contacts");
+      return dataSources.nexusAPI.getRelatedEntity('employees', employee.employeeID, 'contacts');
     },
   	employeeOpportunities: (employee, args, { dataSources }) => {
-    	return dataSources.nexusAPI.getRelatedEntity("employees", employee.employeeID, "opportunities");
+    	return dataSources.nexusAPI.getRelatedEntity('employees', employee.employeeID, 'opportunities');
   	},
     employeeProjects: (employee, args, { dataSources }) => {
-    	return dataSources.nexusAPI.getRelatedEntity("employees", employee.employeeID, "projects");
+    	return dataSources.nexusAPI.getRelatedEntity('employees', employee.employeeID, 'projects');
   	}
+  },
+  Company: {
+    companyAddresses: (company, args, { dataSources }) => {
+      return dataSources.nexusAPI.getRelatedEntity('companies', company.companyID, 'addresses');
+    },
+    companyEmployees: (company, args, { dataSources }) => {
+      return dataSources.nexusAPI.getRelatedEntity('companies', company.companyID, 'employees');
+    },
+    companyContacts: (company, args, { dataSources }) => {
+      return dataSources.nexusAPI.getRelatedEntity('companies', company.companyID, 'contacts');
+    },
+    companyProjects: (company, args, { dataSources }) => {
+      return dataSources.nexusAPI.getRelatedEntity('companies', company.companyID, 'projects');
+    },
+    companyOpportunities: (company, args, { dataSources }) => {
+      return dataSources.nexusAPI.getRelatedEntity('companies', company.companyID, 'opportunities');
+    },
+  },
+  Contact: {
+    contactEmployees: (contact, args, { dataSources }) => {
+      return dataSources.nexusAPI.getRelatedEntity('contacts', contact.contactID, 'employees');
+    },
+    contactProjects: (contact, args, { dataSources }) => {
+      return dataSources.nexusAPI.getRelatedEntity('contacts', contact.contactID, 'projects');
+    },
+    contactOpportunities: (contact, args, { dataSources }) => {
+      return dataSources.nexusAPI.getRelatedEntity('contacts', contact.contactID, 'opportunities');
+    }
   },
   Entity: {
     project: async(entity, args, { dataSources }) => {
@@ -50,21 +78,39 @@ export const resolvers = {
     },
     employee: async (entity, args, { dataSources }) => {
       return dataSources.nexusAPI.getEntity('employees', entity.entityID);
+    },
+    company: async (entity, args, { dataSources }) => {
+      return dataSources.nexusAPI.getEntity('companies', entity.entityID);
+    },
+    contact: async (entity, args, { dataSources }) => {
+      return dataSources.nexusAPI.getEntity('contacts', entity.entityID);
     }
   },
   Query: {
-    project: async (_source, { projectID }, { dataSources }) => {
-      return dataSources.nexusAPI.getEntity('projects', projectID);
-    },
     employee: async (_source, { employeeID }, { dataSources }) => {
       return dataSources.nexusAPI.getEntity('employees', employeeID);
+    },
+    employees: async (_source, args, {dataSources}) => {
+      return dataSources.nexusAPI.getEntities('employees');
+    },
+    project: async (_source, { projectID }, { dataSources }) => {
+      return dataSources.nexusAPI.getEntity('projects', projectID);
     },
     projects: async (_source, args, {dataSources}) => {
       return dataSources.nexusAPI.getEntities('projects');
     },
-    employees: async (_source, args, {dataSources}) => {
-      return dataSources.nexusAPI.getEntities('employees');
-    }
+    company: async (_source, { companyID }, { dataSources }) => {
+      return dataSources.nexusAPI.getEntity('companies', companyID);
+    },
+    companies: async (_source, args, {dataSources}) => {
+      return dataSources.nexusAPI.getEntities('companies');
+    },
+    contact: async (_source, { contactID }, { dataSources }) => {
+      return dataSources.nexusAPI.getEntity('contact', contactID);
+    },
+    contacts: async (_source, args, {dataSources}) => {
+      return dataSources.nexusAPI.getEntities('contacts');
+    },
   },
 };
 

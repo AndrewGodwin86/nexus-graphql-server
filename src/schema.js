@@ -3,9 +3,9 @@ import { makeExecutableSchema } from 'apollo-server';
 import Entity from './typedefs/entity';
 import Project from './typedefs/project';
 import Employee from './typedefs/employee';
-/*import Company from './typedefs/company';
+import Company from './typedefs/company';
 import Contact from './typedefs/contact';
-import Media from './typedefs/media';
+/*import Media from './typedefs/media';
 import Opportunity from './typedefs/opportunity';
 import Relationship from './typedefs/relationship';
 import StreamItem from './typedefs/streamitem';
@@ -37,9 +37,13 @@ import { resolvers } from './resolvers';
 const Queries = `
   type Query {
     projects(status: String, country: String): [Entity]
-    project(projectID:ID): Project
-    employee(id:ID): Employee
+    project(projectID: ID): Project
+    employee(employeeID: ID): Employee
     employees(status: String): [Entity]
+    company(contactID: ID): Company
+    companies(status: String): [Entity]
+    contact(contactID: ID): Contact
+    contacts(status: String): [Entity]
   }
 `;
 
@@ -48,9 +52,9 @@ const schema = makeExecutableSchema({
               Entity,
               ...Project,
               ...Employee,
-              /*...Company,
+              ...Company,
               ...Contact,
-              ...Opportunity,
+              /*...Opportunity,
               Media,
               Relationship,
               TextLibrary,
