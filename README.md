@@ -1,6 +1,6 @@
 # Nexus GraphQL Server
 
-A first stab at a wrapper around the Nexus REST API using GraphQL.
+A wrapper around the Nexus REST API using GraphQL.
 
 ### Contents
 
@@ -12,8 +12,6 @@ A first stab at a wrapper around the Nexus REST API using GraphQL.
 
 
 ## Overview
-I've been wanting to try out GraphQL for some time and the Nexus API seemed like an obvious choice.
-
 Using GraphQL with the Nexus API could simplify syncing operations, reducing the number of round trips between the client and Nexus API.
 
 Here's a modified image originally created for the
@@ -28,7 +26,7 @@ grabs the separate resources and returns them in one response.
 With REST, each resource requires an individual request and response between the client and REST API.
 
 This project uses:
-- [apollo server (graphql-server-express)](https://github.com/apollographql/apollo-server)
+- [apollo server](https://github.com/apollographql/apollo-server)
 - [graphql-tools](https://github.com/apollographql/graphql-tools) to generate the schema
 - [GraphiQL](https://github.com/graphql/graphiql) for exploring the GraphQL
 
@@ -48,11 +46,11 @@ Clone this repo and run npm install
 
 ```
 git clone https://github.com/andrewgodwin86/nexus-graphql-server <my-directory>
-cd <my-directory>/server
+cd <my-directory>
 npm install
 ```
 ### Create Environment Variables
-Create a file named `.env` in the `server` folder and define the KA_CLIENT_ID and KA_CLIENT_KEY variables as follows:
+Create a file named `.env` in the root of the project folder and define the KA_CLIENT_ID and KA_CLIENT_KEY variables as follows:
 ```
 KA_CLIENT_ID="YourClientID"
 KA_CLIENT_KEY="YourClientKey"
@@ -66,8 +64,6 @@ npm start
 ```
 The GraphQL endpoint will be available at `http://localhost:4000/graphql`
 
-GraphiQL will be available at `http://localhost:4000/graphiql`
-
 ## Example queries
 
 Copy and paste the following query snippets into GraphiQL and hit play!
@@ -75,8 +71,8 @@ Copy and paste the following query snippets into GraphiQL and hit play!
 A list of projects with some additional details
 ```javascript
 {
-  projectList {
-    projectDetails {
+  projects {
+    project {
       projectNumber
       projectName
       clientName
@@ -89,7 +85,7 @@ A list of projects with some additional details
 }
 ```
 
-
+TO-DO: Reimplement StreamItems defs
 A list of Stream Items and their data
 ```javascript
 {
@@ -126,8 +122,17 @@ A list of Stream Items and their data
 
 ## TO-DO
 - [ ] Add more example queries
+- [x] Move contents of server folder into root directory.
 - [x] Allow related entity queries in Company/Contact/Opportunity like Project/Employee
-- [ ] Not sure resolver functions are as efficient as they could be.
+- [x] Update to Apollo Server 2
+- [x] Refactor typeDefs/resolvers for Projects
+- [x] Refactor typeDefs/resolvers for Employees
+- [x] Refactor typeDefs/resolvers for Companies 
+- [x] Refactor typeDefs/resolvers for Contacts
+- [ ] Refactor typeDefs/resolvers for EntityColumnMappings
+- [ ] Refactor typeDefs/resolvers for Opportunities
+- [ ] Refactor typeDefs/resolvers for StreamItems
+- [ ] Refactor typeDefs/resolvers for Media
+- [ ] Refactor typeDefs/resolvers for Relationships
 - [ ] Use cache such as DataLoader to prevent duplicate queries
 - [ ] Expand ability to pass URL params to entity list requests
-- [ ] Move contents of server folder into root directory.
