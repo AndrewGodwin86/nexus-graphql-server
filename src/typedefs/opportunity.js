@@ -1,7 +1,7 @@
 import RelatedEntity from './relatedentity';
 
 const Opportunity = `
-  type OpportunityDetails {
+  type Opportunity {
     _Link: String
     _Employees: String
     opportunityEmployees: [RelatedEntity]
