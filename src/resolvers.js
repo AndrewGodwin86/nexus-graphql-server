@@ -102,31 +102,31 @@ export const resolvers = {
       return dataSources.nexusAPI.getEntity('employees', employeeID);
     },
     employees: async (_source, args, {dataSources}) => {
-      return dataSources.nexusAPI.getEntities('employees');
+      return dataSources.nexusAPI.getEntityList('employees');
     },
     project: async (_source, { projectID }, { dataSources }) => {
       return dataSources.nexusAPI.getEntity('projects', projectID);
     },
     projects: async (_source, args, {dataSources}) => {
-      return dataSources.nexusAPI.getEntities('projects');
+      return dataSources.nexusAPI.getProjectList('projects', args);
     },
     company: async (_source, { companyID }, { dataSources }) => {
       return dataSources.nexusAPI.getEntity('companies', companyID);
     },
     companies: async (_source, args, {dataSources}) => {
-      return dataSources.nexusAPI.getEntities('companies');
+      return dataSources.nexusAPI.getEntityList('companies');
     },
     contact: async (_source, { contactID }, { dataSources }) => {
       return dataSources.nexusAPI.getEntity('contacts', contactID);
     },
     contacts: async (_source, args, {dataSources}) => {
-      return dataSources.nexusAPI.getEntities('contacts');
+      return dataSources.nexusAPI.getEntityList('contacts');
     },
     opportunity: async (_source, { opportunityID }, { dataSources }) => {
       return dataSources.nexusAPI.getEntity('opportunities', opportunityID);
     },
     opportunities: async (_source, args, {dataSources}) => {
-      return dataSources.nexusAPI.getEntities('opportunities');
+      return dataSources.nexusAPI.getEntityList('opportunities');
     },
   },
 };

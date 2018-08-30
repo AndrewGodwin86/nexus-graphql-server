@@ -36,7 +36,7 @@ import { resolvers } from './resolvers';
 `;*/
 const Queries = `
   type Query {
-    projects(status: String, country: String): [Entity]
+    projects(perPage: Int, status: String, country: String, name: String): [Entity]
     project(projectID: ID): Project
     employee(employeeID: ID): Employee
     employees(status: String): [Entity]

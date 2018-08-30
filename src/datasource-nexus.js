@@ -22,9 +22,21 @@ export default class NexusAPI extends RESTDataSource {
     return data.results[0];
   }
 
-  async getEntities(entityType, status="Active") {
-    const data = await this.get(`${entityType}`, {
-        Status: status
+  async getEntityList(entityType, args) {
+    const data = await this.get(entityType, {
+        perPage: args.perPage || 1,
+        pageNum: args.pageNum || 0
+    })  
+    return data.results;
+  }
+
+  async getProjectList(entityType, args) {
+    const data = await this.get(entityType, {
+        perPage: args.perPage || 3,
+        pageNum: args.pageNum || 0,
+        name: args.name || '',
+        status: args.status || '',
+        country: args.country || ''
     })  
     return data.results;
   }
