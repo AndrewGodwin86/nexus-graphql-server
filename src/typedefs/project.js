@@ -24,9 +24,9 @@ const Project = `
     clientName: String
     companyCount: Int
     constructionCompletionDate: String
+    constructionCost: Float
     contactCount: Int
     employeeCount: Int
-    constructionCost: Int
     contractDate: String
     contractor: String
     country: String
@@ -92,20 +92,20 @@ const Project = `
     parentProjectNumber: String
     pic: String
     picNumber: String
-    piM_EntityCategory: String
-    piM_EntityID: String
-    piM_PR_CustDat01: String
-    piM_PR_CustNum01: Float
-    piM_PR_CustTxt01: String
-    piM_PR_CustTxt02: String
-    piM_PR_CustTxt03: String
-    piM_PR_CustVar01: String
-    piM_PR_CustVar02: String
-    piM_PR_CustVar03: String
-    piM_PR_CustVar04: String
-    piM_PR_CustVar05: String
-    piM_ProjectRecord: String
-    piM_ProjectWebsite: String
+    PIM_EntityCategory: String
+    PIM_EntityID: String
+    PIM_PR_CustDat01: String
+    PIM_PR_CustNum01: Float
+    PIM_PR_CustTxt01: String
+    PIM_PR_CustTxt02: String
+    PIM_PR_CustTxt03: String
+    PIM_PR_CustVar01: String
+    PIM_PR_CustVar02: String
+    PIM_PR_CustVar03: String
+    PIM_PR_CustVar04: String
+    PIM_PR_CustVar05: String
+    PIM_ProjectRecord: String
+    PIM_ProjectWebsite: String
     profileLastModifiedBy: String
     projectAliases: String
     projectDeliveryMethod: String
@@ -133,14 +133,14 @@ const Project = `
     publicSector: String
     showInProjectDirectory: String
     sourceSystem: String
-    squareFootage: Int
+    squareFootage: Float
     state: String
     status: String
     streetAddress1: String
     streetAddress2: String
     streetAddress3: String
     streetAddress4: String
-    totalProjectCost: Int
+    totalProjectCost: Float
     wsS_ProjectContracts: String
     wsS_ProjectPresentations: String
     wsS_ProjectProposals: String
@@ -283,22 +283,22 @@ const Project = `
     parentProjectNumber: String
     pic: String
     picNumber: String
-    piM_EntityCategory: String
-    piM_EntityID: String
-    piM_PR_CustDat01: String
-    piM_PR_CustNum01: Float
-    piM_PR_CustTxt01: String
-    piM_PR_CustTxt02: String
-    piM_PR_CustTxt03: String
-    piM_PR_CustVar01: String
-    piM_PR_CustVar02: String
-    piM_PR_CustVar03: String
-    piM_PR_CustVar04: String
-    piM_PR_CustVar05: String
-    piM_ProjectRecord: String
-    piM_ProjectWebsite: String
-    piM_ProjectRecord: String
-    piM_ProjectWebsite: String
+    PIM_EntityCategory: String
+    PIM_EntityID: String
+    PIM_PR_CustDat01: String
+    PIM_PR_CustNum01: Float
+    PIM_PR_CustTxt01: String
+    PIM_PR_CustTxt02: String
+    PIM_PR_CustTxt03: String
+    PIM_PR_CustVar01: String
+    PIM_PR_CustVar02: String
+    PIM_PR_CustVar03: String
+    PIM_PR_CustVar04: String
+    PIM_PR_CustVar05: String
+    PIM_ProjectRecord: String
+    PIM_ProjectWebsite: String
+    PIM_ProjectRecord: String
+    PIM_ProjectWebsite: String
     profileLastModifiedBy: String
     projectAliases: String
     projectDeliveryMethod: String
