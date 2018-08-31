@@ -134,5 +134,6 @@ A list of Stream Items and their data
 - [ ] Refactor typeDefs/resolvers for StreamItems
 - [ ] Refactor typeDefs/resolvers for Media
 - [ ] Refactor typeDefs/resolvers for Relationships
+- [ ] Update schema create to use a swagger-to-graphql tool
 - [ ] Use cache such as DataLoader to prevent duplicate queries
 - [ ] Expand ability to pass URL params to entity list requests
