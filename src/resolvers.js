@@ -128,6 +128,12 @@ export const resolvers = {
     opportunities: async (_source, args, { dataSources }) => {
       return dataSources.nexusAPI.getEntityList('opportunities');
     },
+    textLibrary: async (_source, args, { dataSources }) => {
+      return dataSources.nexusAPI.getEntity('textlibraries', textLibraryID);
+    },
+    textLibraries: async (_source, args, { dataSources }) => {
+      return dataSources.nexusAPI.getEntityList('textlibraries', args);
+    },
     relationships: async (_source, args, { dataSources }) => {
       return dataSources.nexusAPI.getRelationships(args);
     },

@@ -8,6 +8,7 @@ const Entity = `
     company: Company
     contact: Contact
     opportunity: Opportunity
+    textLibrary: TextLibrary
   }
 `;
 

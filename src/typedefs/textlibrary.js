@@ -1,12 +1,5 @@
 const TextLibrary = `
   type TextLibrary {
-    entityID: ID
-    entityName: String
-    modDate: String
-    textLibraryDetails(textLibraryID: String!): TextLibraryDetails
-  }
-
-  type TextLibraryDetails {
     _Link: String
     textLibraryID: String
     name: String

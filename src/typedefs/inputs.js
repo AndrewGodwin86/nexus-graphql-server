@@ -557,6 +557,73 @@ const Inputs = `
         maxModDate: String
     }
 
+    input TextLibraryURLParams {
+        FloatperPage: Int
+        FloatpageNum: Int
+        FloatName: String
+        FloatDescription: String
+        FloatText: String
+        FloatLOB_EntityCategory: String
+        FloatLOB_EntityID: String
+        FloatLOB_TextLibraryRecord: String
+        FloatLOB_TL_CustVar01: String
+        FloatLOB_TL_CustVar02: String
+        FloatLOB_TL_CustVar03: String
+        FloatLOB_TL_CustVar04: String
+        FloatLOB_TL_CustVar05: String
+        FloatLOB_TL_CustVar06: String
+        FloatLOB_TL_CustVar07: String
+        FloatLOB_TL_CustVar08: String
+        FloatLOB_TL_CustVar09: String
+        FloatLOB_TL_CustVar10: String
+        FloatLOB_TL_CustVar11: String
+        FloatLOB_TL_CustVar12: String
+        FloatLOB_TL_CustVar13: String
+        FloatLOB_TL_CustVar14: String
+        FloatLOB_TL_CustVar15: String
+        FloatLOB_TL_CustTxt01: String
+        FloatLOB_TL_CustTxt02: String
+        FloatLOB_TL_CustTxt03: String
+        FloatLOB_TL_CustTxt04: String
+        FloatLOB_TL_CustTxt05: String
+        FloatminLOB_TL_CustNum01: Float
+        FloatmaxLOB_TL_CustNum01: Float
+        FloatLOB_TL_CustNum01: Float
+        FloatminLOB_TL_CustNum02: Float
+        FloatmaxLOB_TL_CustNum02: Float
+        FloatLOB_TL_CustNum02: Float
+        FloatminLOB_TL_CustNum03: Float
+        FloatmaxLOB_TL_CustNum03: Float
+        FloatLOB_TL_CustNum03: Float
+        FloatminLOB_TL_CustNum04: Float
+        FloatmaxLOB_TL_CustNum04: Float
+        FloatLOB_TL_CustNum04: Float
+        FloatminLOB_TL_CustNum05: Float
+        FloatmaxLOB_TL_CustNum05: Float
+        FloatLOB_TL_CustNum05: Float
+        FloatminLOB_TL_CustDat01: String
+        FloatmaxLOB_TL_CustDat01: String
+        FloatLOB_TL_CustDat01: String
+        FloatminLOB_TL_CustDat02: String
+        FloatmaxLOB_TL_CustDat02: String
+        FloatLOB_TL_CustDat02: String
+        FloatminLOB_TL_CustDat03: String
+        FloatmaxLOB_TL_CustDat03: String
+        FloatLOB_TL_CustDat03: String
+        FloatminLOB_TL_CustDat04: String
+        FloatmaxLOB_TL_CustDat04: String
+        FloatLOB_TL_CustDat04: String
+        FloatminLOB_TL_CustDat05: String
+        FloatmaxLOB_TL_CustDat05: String
+        FloatLOB_TL_CustDat05: String
+        FloatShowInDirectory: String
+        FloatminModDate: String
+        FloatmaxModDate: String
+        FloatKeySystem: String
+        FloatDeleted: Int
+        FloatApiFilter: Int
+    }
+
     input RelationshipURLParams {
         perPage: Int
         pageNum: Int

@@ -8,9 +8,9 @@ import Contact from './typedefs/contact';
 import Opportunity from './typedefs/opportunity';
 import Inputs from './typedefs/inputs';
 import Relationship from './typedefs/relationship';
+import TextLibrary from './typedefs/textlibrary';
 /*import Media from './typedefs/media';
-import StreamItem from './typedefs/streamitem';
-import TextLibrary from './typedefs/textlibrary';*/
+import StreamItem from './typedefs/streamitem';*/
 import EntityColumnMapping from './typedefs/entitycolumnmapping';
 
 import { resolvers } from './resolvers';
@@ -49,6 +49,8 @@ const Queries = `
     opportunities: [Entity]
     entityColumnMappings: [EntityColumnMapping]
     relationships(urlParams: RelationshipURLParams): [Relationship]
+    textLibraries(urlParams: TextLibraryURLParams): [Entity]
+    textLibrary(textLibraryID: ID): TextLibrary
   }
 `;
 
@@ -63,8 +65,8 @@ const schema = makeExecutableSchema({
               Inputs,
               EntityColumnMapping,
               Relationship,
-              /*Media,
               TextLibrary,
+              /*Media,
               StreamItem,
               */
             ],
