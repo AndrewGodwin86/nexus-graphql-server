@@ -40,7 +40,7 @@ const Queries = `
     projects(urlParams: ProjectURLParams): [Entity] #See typedefs/inputs for ProjectURLParams
     project(projectID: ID): Project
     employee(employeeID: ID): Employee
-    employees(status: String): [Entity]
+    employees(urlParams: EmployeeURLParams): [Entity]
     company(contactID: ID): Company
     companies(status: String): [Entity]
     contact(contactID: ID): Contact

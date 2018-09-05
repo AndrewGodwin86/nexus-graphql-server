@@ -147,5 +147,9 @@ const Inputs = `
         hasLatLon: Int
         apiFilter: Int
     }
+    input EmployeeURLParams {
+        perPage: Int
+        email: String
+    }
   `
   export default Inputs;
