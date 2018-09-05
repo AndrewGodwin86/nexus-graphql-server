@@ -125,8 +125,11 @@ export const resolvers = {
     opportunity: async (_source, { opportunityID }, { dataSources }) => {
       return dataSources.nexusAPI.getEntity('opportunities', opportunityID);
     },
-    opportunities: async (_source, args, {dataSources}) => {
+    opportunities: async (_source, args, { dataSources }) => {
       return dataSources.nexusAPI.getEntityList('opportunities');
+    },
+    relationships: async (_source, args, { dataSources }) => {
+      return dataSources.nexusAPI.getRelationships(args);
     },
     entityColumnMappings: async (_source, args, {dataSources}) => {
       return dataSources.nexusAPI.getEntityColumnMappings();

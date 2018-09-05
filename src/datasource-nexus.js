@@ -34,6 +34,11 @@ export default class NexusAPI extends RESTDataSource {
     return data;
   }
 
+  async getRelationships(args){
+    const data = await this.get('relationships',{...args.urlParams});
+    return data.results;
+  }
+
   async getEntityColumnMappings(){
     const data = await this.get('entitycolumnmappings');
     return data.results;

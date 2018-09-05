@@ -556,5 +556,21 @@ const Inputs = `
         minModDate: String
         maxModDate: String
     }
+
+    input RelationshipURLParams {
+        perPage: Int
+        pageNum: Int
+        AssocType: String
+        TypeID: String
+        EntityCategory: String
+        EntityID: String
+        Role: String
+        RoleDescription: String
+        minModDate: String
+        maxModDate: String
+        AssociatedThruLOB: String
+        AssociatedThruPIM: String
+        AssociationSource: String
+    }
   `
   export default Inputs;
