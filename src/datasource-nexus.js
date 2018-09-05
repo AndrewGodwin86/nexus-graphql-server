@@ -15,6 +15,7 @@ export default class NexusAPI extends RESTDataSource {
     const authorizationB64 = btoa(process.env.KA_CLIENT_ID + ':' + process.env.KA_CLIENT_KEY);
     const authHeader = 'Basic '+ authorizationB64;
     request.headers.set('Authorization', authHeader);
+    console.log(request.path);
   }
 
   async getEntity(entityType, id) {
@@ -29,8 +30,13 @@ export default class NexusAPI extends RESTDataSource {
   }
 
   async getRelatedEntity(entityType, entityID, relatedEntityType) {
-    const data = this.get(`${entityType}/${entityID}/${relatedEntityType}`).then(d => d["results"]);
+    const data = await this.get(`${entityType}/${entityID}/${relatedEntityType}`).then(d => d["results"]);
     return data;
+  }
+
+  async getEntityColumnMappings(){
+    const data = await this.get('entitycolumnmappings');
+    return data.results;
   }
 
 }

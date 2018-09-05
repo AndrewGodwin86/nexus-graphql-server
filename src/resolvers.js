@@ -128,6 +128,9 @@ export const resolvers = {
     opportunities: async (_source, args, {dataSources}) => {
       return dataSources.nexusAPI.getEntityList('opportunities');
     },
+    entityColumnMappings: async (_source, args, {dataSources}) => {
+      return dataSources.nexusAPI.getEntityColumnMappings();
+    }
   },
 };
 
