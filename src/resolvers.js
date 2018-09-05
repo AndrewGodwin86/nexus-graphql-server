@@ -114,7 +114,7 @@ export const resolvers = {
       return dataSources.nexusAPI.getEntity('companies', companyID);
     },
     companies: async (_source, args, {dataSources}) => {
-      return dataSources.nexusAPI.getEntityList('companies');
+      return dataSources.nexusAPI.getEntityList('companies',args);
     },
     contact: async (_source, { contactID }, { dataSources }) => {
       return dataSources.nexusAPI.getEntity('contacts', contactID);
