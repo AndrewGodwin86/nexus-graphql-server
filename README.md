@@ -129,11 +129,11 @@ A list of Stream Items and their data
 - [x] Refactor typeDefs/resolvers for Employees
 - [x] Refactor typeDefs/resolvers for Companies 
 - [x] Refactor typeDefs/resolvers for Contacts
-- [ ] Refactor typeDefs/resolvers for EntityColumnMappings
-- [ ] Refactor typeDefs/resolvers for Opportunities
+- [x] Refactor typeDefs/resolvers for EntityColumnMappings
+- [x] Refactor typeDefs/resolvers for Opportunities
 - [ ] Refactor typeDefs/resolvers for StreamItems
 - [ ] Refactor typeDefs/resolvers for Media
-- [ ] Refactor typeDefs/resolvers for Relationships
+- [x] Refactor typeDefs/resolvers for Relationships
 - [ ] Investigate fixing node version in package.json... >8.11?
 - [ ] Update schema create to use a swagger-to-graphql tool
 - [ ] Use cache such as DataLoader to prevent duplicate queries
