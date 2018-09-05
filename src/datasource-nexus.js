@@ -23,13 +23,8 @@ export default class NexusAPI extends RESTDataSource {
   }
 
   async getEntityList(entityType, args) {
-    const data = await this.get(entityType, {...args.urlParams} );
-    return data.results;
-  }
-
-  async getProjectList(entityType, args) {
     // ...args.urlParams is ES6 syntax for destructuing an object
-    const data = await this.get(entityType, {...args.urlParams})  
+    const data = await this.get(entityType, {...args.urlParams} );
     return data.results;
   }
 

@@ -108,7 +108,7 @@ export const resolvers = {
       return dataSources.nexusAPI.getEntity('projects', projectID);
     },
     projects: async (_source, args, {dataSources}) => {
-      return dataSources.nexusAPI.getProjectList('projects', args);
+      return dataSources.nexusAPI.getEntityList('projects', args);
     },
     company: async (_source, { companyID }, { dataSources }) => {
       return dataSources.nexusAPI.getEntity('companies', companyID);
