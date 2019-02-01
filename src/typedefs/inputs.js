@@ -6,7 +6,6 @@ const Inputs = `
         name: String
         chargeType: String
         city: String
-        country: String
         clientID: String
         clientName: String
         minCompanyCount: Int
@@ -120,7 +119,6 @@ const Inputs = `
         minSquareFootage: Int
         maxSquareFootage: Int
         state: String
-        status: String
         streetAddress: String
         minTotalProjectCost: Int
         maxTotalProjectCost: Int
@@ -215,8 +213,6 @@ const Inputs = `
         LOB_EntityID: String
         minLOB_EM_CustDat01: String
         maxLOB_EM_CustDat01: String
-        minLOB_EM_CustDat02: String
-        maxLOB_EM_CustDat02: String
         minLOB_EM_CustDat02: String
         maxLOB_EM_CustDat02: String
         minLOB_EM_CustDat03: String
@@ -351,8 +347,6 @@ const Inputs = `
         maxLOB_CV_CustDat01: String
         minLOB_CV_CustDat02: String
         maxLOB_CV_CustDat02: String
-        minLOB_CV_CustDat02: String
-        maxLOB_CV_CustDat02: String
         minLOB_CV_CustDat03: String
         maxLOB_CV_CustDat03: String
         minLOB_CV_CustDat04: String
@@ -476,8 +470,6 @@ const Inputs = `
         LOB_EntityID: String
         minLOB_CO_CustDat01: String
         maxLOB_CO_CustDat01: String
-        minLOB_CO_CustDat02: String
-        maxLOB_CO_CustDat02: String
         minLOB_CO_CustDat02: String
         maxLOB_CO_CustDat02: String
         minLOB_CO_CustDat03: String
