@@ -24,12 +24,12 @@
     "@babel/core": "^7.0.0",
     "@babel/node": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
-    "nodemon": "^1.17.5"
+    "nodemon": "^2.0.4"
   },
   "dependencies": {
-    "apollo-datasource-rest": "^0.2.2",
+    "apollo-datasource-rest": "^0.9.4",
     "apollo-server": "^2.18.2",
-    "dotenv": "^5.0.1",
-    "graphql": "^14.2.1"
+    "dotenv": "^8.2.0",
+    "graphql": "^15.3.0"
   }
 }
