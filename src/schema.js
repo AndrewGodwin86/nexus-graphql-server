@@ -1,5 +1,4 @@
 import { makeExecutableSchema } from 'apollo-server';
-
 import Entity from './typedefs/entity';
 import Project from './typedefs/project';
 import Employee from './typedefs/employee';
@@ -37,21 +36,22 @@ const Queries = `
 `;
 
 const schema = makeExecutableSchema({
-  typeDefs: [ Queries,
-              Entity,
-              ...Project,
-              ...Employee,
-              ...Company,
-              ...Contact,
-              ...Opportunity,
-              Inputs,
-              EntityColumnMapping,
-              Relationship,
-              TextLibrary,
-              /*Media,
-              StreamItem,
-              */
-            ],
+  typeDefs: [
+    Queries,
+    Entity,
+    ...Project,
+    ...Employee,
+    ...Company,
+    ...Contact,
+    ...Opportunity,
+    Inputs,
+    EntityColumnMapping,
+    Relationship,
+    TextLibrary,
+    /*Media,
+    StreamItem,
+    */
+  ],
   resolvers
 });
 export { schema };
