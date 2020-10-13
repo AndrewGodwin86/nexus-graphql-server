@@ -3,8 +3,7 @@ import dotenv from 'dotenv';
 import NexusAPI from './datasource-nexus';
 import { schema } from './schema';
 
-// This is per the dotenv docs to bring in env variables
-// defined in .env
+// Use .env file for config/secrets
 dotenv.config();
 
 // Warn if clientID or key are missing
@@ -13,8 +12,6 @@ if (typeof process.env.KA_CLIENT_ID === 'undefined' || process.env.KA_CLIENT_KEY
 }
 
 const server = new ApolloServer({
-  //typeDefs,
-  //resolvers,
   schema,
   dataSources: () => {
     return {
