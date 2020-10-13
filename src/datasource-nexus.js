@@ -4,17 +4,13 @@ export default class NexusAPI extends RESTDataSource {
     constructor() {
         super();
         this.baseURL = 'https://nexus5.knowledge-architecture.com/api/v1';
+        this.authValue = Buffer.from(`${process.env.KA_CLIENT_ID}:${process.env.KA_CLIENT_KEY}`)
+          .toString('base64');
     }
 
   willSendRequest(request) {
-    // function to base64 encode a string using Buffer
-    const btoa = function(str) {
-        return Buffer.from(str).toString('base64');
-    }
-    // Encode ClientID:ClientKey to use in request headers
-    const authorizationB64 = btoa(process.env.KA_CLIENT_ID + ':' + process.env.KA_CLIENT_KEY);
-    const authHeader = 'Basic '+ authorizationB64;
-    request.headers.set('Authorization', authHeader);
+    // Set auth header for each request
+    request.headers.set('Authorization', `Basic ${this.authValue}`);
     console.log(request.path);
   }
 
