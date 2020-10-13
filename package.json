@@ -27,19 +27,9 @@
     "nodemon": "^1.17.5"
   },
   "dependencies": {
-    "apollo-cache-control": "^0.4.1",
-    "apollo-cache-inmemory": "^1.4.2",
     "apollo-datasource-rest": "^0.2.2",
     "apollo-server": "^2.18.2",
-    "body-parser": "^1.17.1",
-    "buffer": "^5.0.8",
-    "cors": "^2.8.4",
     "dotenv": "^5.0.1",
-    "express": "^4.15.2",
-    "graphql": "^14.1.1",
-    "graphql-extensions": "^0.4.3",
-    "graphql-tag": "^2.10.1",
-    "graphql-tools": "^4.0.4",
-    "node-fetch": "^2.6.1"
+    "graphql": "^14.2.1"
   }
 }
