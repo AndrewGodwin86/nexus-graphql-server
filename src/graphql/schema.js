@@ -1,18 +1,18 @@
-import { makeExecutableSchema } from 'apollo-server';
-import Entity from './typedefs/entity';
-import Project from './typedefs/project';
-import Employee from './typedefs/employee';
-import Company from './typedefs/company';
-import Contact from './typedefs/contact';
-import Opportunity from './typedefs/opportunity';
-import Inputs from './typedefs/inputs';
-import Relationship from './typedefs/relationship';
-import TextLibrary from './typedefs/textlibrary';
-/*import Media from './typedefs/media';
-import StreamItem from './typedefs/streamitem';*/
-import EntityColumnMapping from './typedefs/entitycolumnmapping';
+import { makeExecutableSchema } from "apollo-server";
+import Entity from "../typedefs/entity";
+import Project from "../typedefs/project";
+import Employee from "../typedefs/employee";
+import Company from "../typedefs/company";
+import Contact from "../typedefs/contact";
+import Opportunity from "../typedefs/opportunity";
+import Inputs from "../typedefs/inputs";
+import Relationship from "../typedefs/relationship";
+import TextLibrary from "../typedefs/textlibrary";
+// /*import Media from './typedefs/media';
+import StreamItem from "./typedefs/streamitem";
+import EntityColumnMapping from "../typedefs/entitycolumnmapping";
 
-import { resolvers } from './resolvers';
+import { resolvers } from "./resolvers";
 
 const Queries = `
   type Query { # This type specifies the entry points into our API.
@@ -31,7 +31,7 @@ const Queries = `
     textLibraries(urlParams: TextLibraryURLParams): [Entity]
     textLibrary(textLibraryID: ID): TextLibrary
     #media(urlParams: MediaURLParams): [Media]
-    #streamItems(urlParams: StreamItemURLParams): [StreamItem]
+    streamItems(urlParams: StreamItemURLParams): [StreamItem]
   }
 `;
 
@@ -48,10 +48,9 @@ const schema = makeExecutableSchema({
     EntityColumnMapping,
     Relationship,
     TextLibrary,
-    /*Media,
+    // Media,
     StreamItem,
-    */
   ],
-  resolvers
+  resolvers,
 });
 export { schema };
