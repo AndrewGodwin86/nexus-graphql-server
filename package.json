@@ -27,18 +27,11 @@
     "nodemon": "^2.0.12"
   },
   "dependencies": {
-<<<<<<< HEAD
     "apollo-datasource-rest": "^3.2.0",
     "apollo-server-core": "^3.3.0",
     "apollo-server-express": "^3.3.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "graphql": "^15.5.3"
-=======
-    "apollo-datasource-rest": "^0.9.4",
-    "apollo-server": "^2.25.3",
-    "dotenv": "^8.2.0",
-    "graphql": "^15.3.0"
->>>>>>> 3aeff34f117c5b55d1f276c0695fcac6be5aed00
   }
 }
